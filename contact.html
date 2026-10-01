@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Doug Lutz — Custom Furniture, Chamberino NM | dadowoodworking</title>
+<meta name="description" content="Call, email, or visit dadowoodworking in Chamberino, New Mexico. Custom hardwood furniture, cabinetry, and heirloom pieces — delivered across NM and TX." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<style>
+  /* ---------- Hero ---------- */
+  .contact-hero {
+    max-width: 1360px; margin: 0 auto;
+    padding: clamp(56px, 9vh, 96px) clamp(24px, 5vw, 72px) 48px;
+  }
+  .contact-hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500; margin-bottom: 20px;
+  }
+  .contact-hero .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--walnut); }
+  .contact-hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(40px, 5.4vw, 72px); line-height: 1.05;
+    letter-spacing: -0.02em; max-width: 22ch;
+  }
+  .contact-hero h1 em { font-style: italic; color: var(--walnut); }
+  .contact-hero p.lede {
+    margin-top: 22px; max-width: 66ch;
+    font-size: clamp(16px, 1.15vw, 18px); line-height: 1.65;
+    color: rgba(26,20,16,0.78);
+  }
+
+  /* ---------- Three-way cards ---------- */
+  .three-ways {
+    max-width: 1360px; margin: 0 auto;
+    padding: 32px clamp(24px, 5vw, 72px) 72px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .way {
+    background: var(--cream); border: 1px solid rgba(26,20,16,0.12);
+    border-radius: 4px; padding: 32px 28px 32px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .way .icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(107, 63, 34, 0.1); color: var(--walnut);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 4px;
+  }
+  .way .icon svg { width: 22px; height: 22px; }
+  .way h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 24px; letter-spacing: -0.01em;
+  }
+  .way h2 em { font-style: italic; color: var(--walnut); }
+  .way .big {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 28px; color: var(--ink);
+    text-decoration: none; letter-spacing: -0.01em;
+    border-bottom: 1px solid rgba(107, 63, 34, 0.25);
+    padding-bottom: 4px; display: inline-block;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .way .big:hover { color: var(--walnut); border-bottom-color: var(--walnut); }
+  .way p {
+    font-size: 14.5px; line-height: 1.6; color: rgba(26,20,16,0.72);
+  }
+  .way .hours {
+    margin-top: auto; padding-top: 16px;
+    border-top: 1px solid rgba(26,20,16,0.1);
+    font-size: 12.5px; letter-spacing: 0.02em; color: rgba(26,20,16,0.65);
+    line-height: 1.6;
+  }
+  .way .hours strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- Studio visit block ---------- */
+  .studio {
+    background: var(--cream-warm);
+    padding: 88px clamp(24px, 5vw, 72px);
+  }
+  .studio .inner {
+    max-width: 1360px; margin: 0 auto;
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 56px; align-items: center;
+  }
+  .studio .visual {
+    position: relative; aspect-ratio: 4 / 3;
+    background: var(--cream); border-radius: 2px; overflow: hidden;
+  }
+  .studio .visual img { width: 100%; height: 100%; object-fit: cover; }
+  .studio .visual::after {
+    content: ''; position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(15,8,4,0.08); pointer-events: none;
+  }
+  .studio h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08;
+    letter-spacing: -0.02em; margin-bottom: 20px; max-width: 18ch;
+  }
+  .studio h2 em { font-style: italic; color: var(--walnut); }
+  .studio p {
+    font-size: 15.5px; line-height: 1.7; color: rgba(26,20,16,0.78);
+    margin-bottom: 14px; max-width: 60ch;
+  }
+  .studio .details {
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid rgba(26,20,16,0.14);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px;
+  }
+  .studio .details .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(26,20,16,0.5); margin-bottom: 4px;
+  }
+  .studio .details .val {
+    font-size: 15px; line-height: 1.5; color: var(--ink);
+  }
+  .studio .details .val a { color: var(--walnut); text-decoration: none; border-bottom: 1px solid rgba(107,63,34,0.3); }
+
+  /* ---------- Form ---------- */
+  .form-wrap {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 96px clamp(24px, 5vw, 72px);
+  }
+  .form-inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 72px;
+  }
+  .form-inner .intro .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--amber-hot); font-weight: 500; margin-bottom: 20px;
+  }
+  .form-inner .intro .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--amber-hot); }
+  .form-inner .intro h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(28px, 3vw, 42px); line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .form-inner .intro h2 em { font-style: italic; color: var(--amber-hot); }
+  .form-inner .intro p {
+    font-size: 16px; line-height: 1.65; color: var(--cream-soft);
+    margin-bottom: 18px; max-width: 44ch;
+  }
+  .form-inner .intro .contact-line {
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid rgba(244,237,225,0.12);
+    font-size: 14.5px; line-height: 1.7; color: var(--cream-soft);
+  }
+  .form-inner .intro .contact-line a {
+    color: var(--amber-hot); text-decoration: none;
+    border-bottom: 1px solid rgba(217,151,87,0.4);
+  }
+
+  form.contact-form { display: flex; flex-direction: column; gap: 20px; }
+  form.contact-form .row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+  form.contact-form .field { display: flex; flex-direction: column; gap: 8px; }
+  form.contact-form label {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--cream-soft); font-weight: 500;
+  }
+  form.contact-form label .req { color: var(--amber-hot); }
+  form.contact-form input,
+  form.contact-form select,
+  form.contact-form textarea {
+    background: rgba(244,237,225,0.05);
+    border: 1px solid rgba(244,237,225,0.16);
+    color: var(--cream); font: inherit;
+    padding: 14px 16px; border-radius: 3px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  form.contact-form textarea { min-height: 130px; resize: vertical; font-family: inherit; }
+  form.contact-form input:focus,
+  form.contact-form select:focus,
+  form.contact-form textarea:focus {
+    outline: none; border-color: var(--amber-hot);
+    background: rgba(244,237,225,0.09);
+  }
+  form.contact-form select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--cream-soft) 50%), linear-gradient(135deg, var(--cream-soft) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 44px; }
+  form.contact-form .submit-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 20px; flex-wrap: wrap; margin-top: 8px;
+  }
+  form.contact-form .submit-row .note {
+    font-size: 13px; color: rgba(244,237,225,0.55); max-width: 34ch;
+  }
+  form.contact-form button {
+    background: var(--amber); color: #1a1006;
+    border: 1px solid var(--amber);
+    padding: 15px 30px; border-radius: 4px;
+    font: inherit; font-weight: 500; letter-spacing: 0.02em;
+    cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  form.contact-form button:hover {
+    background: var(--amber-hot); border-color: var(--amber-hot);
+    transform: translateY(-1px);
+  }
+  form.contact-form button svg { width: 16px; height: 16px; }
+  .form-msg { display: none; padding: 16px 20px; border-radius: 3px; font-size: 14.5px; line-height: 1.55; }
+  .form-msg.success { display: block; background: rgba(200, 137, 74, 0.14); border: 1px solid rgba(200, 137, 74, 0.4); color: var(--cream); }
+
+  /* ---------- FAQ mini ---------- */
+  .faq-mini {
+    max-width: 900px; margin: 0 auto;
+    padding: 88px clamp(24px, 5vw, 72px);
+  }
+  .faq-mini h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(26px, 2.8vw, 36px); letter-spacing: -0.02em;
+    margin-bottom: 32px; text-align: center;
+  }
+  .faq-mini h2 em { font-style: italic; color: var(--walnut); }
+  .faq-mini details {
+    border-top: 1px solid rgba(26,20,16,0.12);
+    padding: 20px 0;
+  }
+  .faq-mini details:last-of-type { border-bottom: 1px solid rgba(26,20,16,0.12); }
+  .faq-mini summary {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 19px; letter-spacing: -0.01em; cursor: pointer;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  }
+  .faq-mini summary::-webkit-details-marker { display: none; }
+  .faq-mini summary::after {
+    content: '+'; font-family: 'Inter', sans-serif; font-weight: 400;
+    font-size: 22px; color: var(--walnut); transition: transform 0.2s ease; line-height: 1;
+  }
+  .faq-mini details[open] summary::after { content: '−'; }
+  .faq-mini details p {
+    margin-top: 12px; font-size: 15px; line-height: 1.7;
+    color: rgba(26,20,16,0.75); max-width: 68ch;
+  }
+
+  @media (max-width: 900px) {
+    .three-ways { grid-template-columns: 1fr; }
+    .studio .inner { grid-template-columns: 1fr; gap: 40px; }
+    .studio .details { grid-template-columns: 1fr; gap: 16px; }
+    .form-inner { grid-template-columns: 1fr; gap: 40px; }
+    form.contact-form .row { grid-template-columns: minmax(0,1fr); }
+  }
+  .logo-img { width: 44px !important; height: 44px !important; display: block; flex: none; color: initial; border-radius: 2px; }
+  #form-msg.error { color: #9b2c1f; }
+  #form-msg.error a { color: inherit; text-decoration: underline; }
+  form select, form input, form textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }
+</style>
+  <link rel="icon" type="image/png" href="brand/favicon.png" />
+<!-- SEO:START -->
+<style id="mobile-fixes">
+footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+.menu-toggle, .mobile-menu { display: none; }
+@media (max-width: 900px) {
+  nav.primary { margin-left: auto; }
+  .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; flex: none; background: transparent; color: inherit;
+    border: 1px solid currentColor; border-radius: 999px; cursor: pointer; padding: 0; opacity: .9; }
+  .menu-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu:not([hidden]) { display: flex; position: fixed; inset: 0; z-index: 10000; background: #1a1410;
+    flex-direction: column; justify-content: center; align-items: center; padding: 80px 24px; }
+  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .mobile-menu nav a { font-family: 'Fraunces', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f4ede3;
+    text-decoration: none; letter-spacing: 0; text-transform: none; }
+  .mobile-menu nav a.current { color: #d49a5c; }
+  .mobile-menu nav a.current::after { display: none; }
+  .mobile-menu nav a.phone-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+    font-family: inherit; font-size: 17px; padding: 12px 22px; border: 1px solid rgba(244,237,227,.5); border-radius: 999px; }
+  .mobile-menu nav a.phone-link svg { width: 18px; height: 18px; }
+  .mobile-menu-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(244,237,227,.6); color: #f4ede3; cursor: pointer; }
+  .mobile-menu-close span { position: absolute; left: 12px; top: 21px; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu-close span:first-child { transform: rotate(45deg); }
+  .mobile-menu-close span:last-child { transform: rotate(-45deg); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+  .form-inner { grid-template-columns: minmax(0, 1fr) !important; }
+  .form-inner > * { min-width: 0; }
+}
+@media (max-width: 480px) {
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 44px; height: 44px;
+    display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0; }
+}
+</style>
+<script src="menu.js" defer></script>
+<link rel="canonical" href="https://www.dadowoodworking.com/contact" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="dadowoodworking" />
+<meta property="og:title" content="Contact Doug Lutz — Custom Furniture, Chamberino NM | dadowoodworking" />
+<meta property="og:description" content="Call, email, or visit dadowoodworking in Chamberino, New Mexico. Custom hardwood furniture, cabinetry, and heirloom pieces — delivered across NM and TX." />
+<meta property="og:url" content="https://www.dadowoodworking.com/contact" />
+<meta property="og:image" content="https://www.dadowoodworking.com/brand/dadowoodworking-custom-furniture-share.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Doug Lutz — Custom Furniture, Chamberino NM | dadowoodworking" />
+<meta name="twitter:description" content="Call, email, or visit dadowoodworking in Chamberino, New Mexico. Custom hardwood furniture, cabinetry, and heirloom pieces — delivered across NM and TX." />
+<meta name="twitter:image" content="https://www.dadowoodworking.com/brand/dadowoodworking-custom-furniture-share.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["LocalBusiness", "FurnitureStore"], "@id": "https://www.dadowoodworking.com/#business", "name": "dadowoodworking", "alternateName": ["Dado Woodworking", "dadowoodworking.com"], "description": "Custom legacy-grade hardwood furniture, museum-quality picture framing, and custom architectural additions, handmade by Doug Lutz in Chamberino, New Mexico.", "url": "https://www.dadowoodworking.com/", "logo": "https://www.dadowoodworking.com/brand/dadowoodworking-logo.png", "image": "https://www.dadowoodworking.com/workshop-hero-dado-woodworking.jpg", "telephone": "+1-575-640-7463", "email": "dblutz@gmail.com", "founder": {"@type": "Person", "name": "Douglas Lutz"}, "address": {"@type": "PostalAddress", "streetAddress": "650 La Vina Road", "addressLocality": "Chamberino", "addressRegion": "NM", "postalCode": "88027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00", "description": "By appointment only"}], "areaServed": [{"@type": "City", "name": "Las Cruces, NM"}, {"@type": "City", "name": "El Paso, TX"}, {"@type": "City", "name": "Albuquerque, NM"}, {"@type": "City", "name": "Santa Fe, NM"}, {"@type": "City", "name": "Tucson, AZ"}, {"@type": "City", "name": "Phoenix, AZ"}, {"@type": "City", "name": "Midland–Odessa, TX"}, {"@type": "City", "name": "Dallas–Fort Worth, TX"}, {"@type": "City", "name": "Austin, TX"}, {"@type": "City", "name": "San Antonio, TX"}, {"@type": "City", "name": "Houston, TX"}], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom hardwood furniture"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom cabinetry and built-ins"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Museum-quality picture framing"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture repair and restoration"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom fireplace mantels and architectural additions"}}], "sameAs": ["https://www.angi.com/companylist/us/nm/anthony/dadowoodworkingcom-reviews-1.htm", "https://reviews.birdeye.com/dadowoodworkingcom-167599908273697"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dadowoodworking.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.dadowoodworking.com/contact"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How quickly do you respond?", "acceptedAnswer": {"@type": "Answer", "text": "I reply to emails and voicemails as soon as I can. If I'm in the middle of a build or out on a delivery, it may take a little longer."}}, {"@type": "Question", "name": "Do I need an appointment to visit the shop?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Workshop visits are by appointment only. Call or email ahead and we'll pick a time."}}, {"@type": "Question", "name": "Where do you deliver?", "acceptedAnswer": {"@type": "Answer", "text": "I deliver locally, and delivery is available throughout the U.S. See service areas for the cities I serve most often."}}, {"@type": "Question", "name": "Can I send you a photo of the room?", "acceptedAnswer": {"@type": "Answer", "text": "Please do. A photo of the room, a rough measurement or two, and a note about what the piece needs to do is enough for me to start sketching. Email works best for attachments."}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+  <div class="announce">
+    Now booking commissions — delivery available nationwide.
+    <a href="#form">Send a note &rarr;</a>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="dadowoodworking home">
+      <img class="logo-mark logo-img" src="brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
+      <span>
+        <span class="logo-text">dadowoodworking</span>
+        <div class="logo-sub">Chamberino, NM</div>
+      </span>
+    </a>
+
+    <nav class="primary" aria-label="Primary">
+      <a href="gallery.html">Gallery</a>
+      <a href="commission.html">Commission</a>
+      <a href="contact.html" class="current">Contact</a>
+      <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (575) 640-7463
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <nav class="crumbs breadcrumb-trail" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current" aria-current="page">Contact</span></nav>
+      <div class="eyebrow">Contact</div>
+    <h1>The best pieces start with a <em>conversation</em>.</h1>
+    <p class="lede">Call me, email me, or send a note. First conversations are free — we'll talk about the room, the piece, and whether a commission makes sense before you commit to anything.</p>
+  </section>
+
+  <!-- THREE WAYS -->
+  <section class="three-ways">
+    <div class="way">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <h2><em>Call</em> the shop</h2>
+      <a class="big" href="tel:+15756407463">(575) 640-7463</a>
+      <p>The fastest way to reach me. If I'm at the bench, leave a voicemail with your name and the piece you're thinking about and I'll call you back.</p>
+      <div class="hours"><strong>Best for</strong><br />Photos, sketches, and room measurements</div>
+    </div>
+
+    <div class="way">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <polyline points="3 7 12 13 21 7"/>
+        </svg>
+      </div>
+      <h2><em>Email</em> me</h2>
+      <a class="big" href="mailto:dblutz@gmail.com">dblutz@gmail.com</a>
+      <p>Best if you'd like to attach photos of the room, a sketch, or a piece you love. I read every email and reply as soon as I can.</p>
+      <div class="hours">
+        <strong>Response time</strong><br />
+        Within 2 business days<br />
+        Longer if I'm on a delivery run
+      </div>
+    </div>
+
+    <div class="way">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h2><em>Visit</em> the workshop</h2>
+      <span class="big">Chamberino, NM</span>
+      <p>The workshop is in Chamberino, in the Mesilla Valley between Las Cruces and El Paso. Studio visits are by appointment.</p>
+      <div class="hours">
+        <strong>650 La Vina Road</strong><br />
+        Chamberino, NM 88027<br />
+        By appointment only
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section class="studio">
+    <div class="inner">
+      <div class="visual">
+        <img src="pieces/custom-built-in-cabinetry-dado-woodworking.jpg" alt="Custom built-in cabinetry from the dadowoodworking shop" />
+      </div>
+      <div>
+        <h2>Come see the <em>bench</em>, not just the pieces.</h2>
+        <p>Studio visits are welcome — a lot of clients like to walk the shop, feel a few boards, and see a piece in progress before they commit to a commission. It also gives us the chance to talk in person about your room, your budget, and the kind of piece that would actually earn its place there.</p>
+        <p>Visits are by appointment so I can put down the tools and give you my full attention. A visit usually runs 30 to 45 minutes.</p>
+        <div class="details">
+          <div>
+            <div class="label">Address</div>
+            <div class="val">650 La Vina Road<br />Chamberino, NM 88027</div>
+          </div>
+          <div>
+            <div class="label">Book a visit</div>
+            <div class="val"><a href="tel:+15756407463">(575) 640-7463</a><br /><a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a></div>
+          </div>
+          <div>
+            <div class="label">Hours</div>
+            <div class="val">Mon – Sat · 10am – 6pm<br />By appointment only</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-wrap" id="form">
+    <div class="form-inner">
+      <div class="intro">
+        <div class="eyebrow">Send a note</div>
+        <h2>Send me a <em>quick note</em>.</h2>
+        <p>For general questions, delivery questions, or a first hello. If you already know you want to commission a piece, the <a href="commission.html" style="color:var(--amber-hot);border-bottom:1px solid rgba(217,151,87,0.4);text-decoration:none;">commission form</a> has a few more fields to get us started faster.</p>
+        <div class="contact-line">
+          <div><strong>Doug at dadowoodworking</strong></div>
+          <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+          <div><a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a></div>
+          <div>650 La Vina Road, Chamberino, NM 88027</div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <div class="row">
+          <div class="field">
+            <label for="ct-name">Your name <span class="req">*</span></label>
+            <input type="text" id="ct-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="ct-city">City</label>
+            <input type="text" id="ct-city" name="city" placeholder="El Paso, Austin, Santa Fe…" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="ct-email">Email <span class="req">*</span></label>
+            <input type="email" id="ct-email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="ct-phone">Phone</label>
+            <input type="tel" id="ct-phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="ct-topic">What's this about?</label>
+          <select id="ct-topic" name="topic">
+            <option value="">Choose a topic (optional)</option>
+            <option>General question</option>
+            <option>Commission inquiry</option>
+            <option>Studio visit</option>
+            <option>Delivery / logistics</option>
+            <option>Press or feature</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="ct-message">Your message <span class="req">*</span></label>
+          <textarea id="ct-message" name="message" required placeholder="Tell me what you're thinking about — a room, a piece, a question. There's no wrong way to start the conversation."></textarea>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">
+            Send this to Doug
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+          <div class="note">I'll get back to you as soon as I can. To talk sooner, call (575) 640-7463.</div>
+        </div>
+
+        <div class="form-msg" id="form-msg" role="status" aria-live="polite">
+          Thanks — your note is on the way to Doug. I'll be in touch soon.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-mini">
+    <h2>Quick <em>answers</em>.</h2>
+
+    <details>
+      <summary>How quickly do you respond?</summary>
+      <p>I reply to emails and voicemails as soon as I can. If I'm in the middle of a build or out on a delivery, it may take a little longer.</p>
+    </details>
+
+    <details>
+      <summary>Do I need an appointment to visit the shop?</summary>
+      <p>Yes. Workshop visits are by appointment only. Call or email ahead and we'll pick a time.</p>
+    </details>
+
+    <details>
+      <summary>Where do you deliver?</summary>
+      <p>I deliver locally, and delivery is available throughout the U.S. See <a href="locations.html" style="color:var(--walnut);">service areas</a> for the cities I serve most often.</p>
+    </details>
+
+    <details>
+      <summary>Can I send you a photo of the room?</summary>
+      <p>Please do. A photo of the room, a rough measurement or two, and a note about what the piece needs to do is enough for me to start sketching. Email works best for attachments.</p>
+    </details>
+
+    </section>
+
+  <!-- CROSS-LINK CHIPS -->
+  <section class="also-serving">
+    <div class="head">Delivered <em>free</em> across the Southwest.</div>
+    <div class="city-chips">
+      <a href="albuquerque.html"><span>Albuquerque</span> <span class="abbr">NM</span></a>
+      <a href="santa-fe.html"><span>Santa Fe</span> <span class="abbr">NM</span></a>
+      <a href="las-cruces.html"><span>Las Cruces</span> <span class="abbr">NM</span></a>
+      <a href="el-paso.html"><span>El Paso</span> <span class="abbr">TX</span></a>
+      <a href="dallas.html"><span>Dallas</span> <span class="abbr">TX</span></a>
+      <a href="austin.html"><span>Austin</span> <span class="abbr">TX</span></a>
+      <a href="houston.html"><span>Houston</span> <span class="abbr">TX</span></a>
+      <a href="san-antonio.html"><span>San Antonio</span> <span class="abbr">TX</span></a>
+      <a href="midland-odessa.html"><span>Midland–Odessa</span> <span class="abbr">TX</span></a>
+      <a href="tucson.html"><span>Tucson</span> <span class="abbr">AZ</span></a>
+      <a href="phoenix.html"><span>Phoenix</span> <span class="abbr">AZ</span></a>
+      <a href="locations.html"><span>See all service areas</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="locations.html">Service areas</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
+
+  <script>
+    // Sends form submissions to dblutz@gmail.com via FormSubmit (formsubmit.co).
+    (function () {
+      var form = document.getElementById('contact-form');
+      var msg = document.getElementById('form-msg');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (form.querySelector('[name=_honey]') && form.querySelector('[name=_honey]').value) return;
+        var btn = form.querySelector('button[type=submit]');
+        var data = {};
+        Array.prototype.forEach.call(form.elements, function (el) {
+          if (!el.name || el.name === '_honey') return;
+          if (el.type === 'checkbox') { data[el.name] = el.checked ? 'Yes' : 'No'; return; }
+          data[el.name] = el.value;
+        });
+        data._subject = 'New website message' + (data.name ? ' from ' + data.name : '');
+        data._template = 'table';
+        data._captcha = 'false';
+        if (data.email) data._replyto = data.email;
+        btn.disabled = true;
+        msg.classList.remove('success', 'error');
+        msg.textContent = 'Sending…';
+        fetch('https://formsubmit.co/ajax/dblutz@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'Send failed');
+            msg.classList.add('success');
+            msg.textContent = "Thanks — your note is on the way to Doug. I'll be in touch soon.";
+            form.reset();
+            msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          })
+          .catch(function () {
+            btn.disabled = false;
+            msg.classList.add('error');
+            msg.innerHTML = 'Sorry, your message didn\'t go through. Please call <a href="tel:+15756407463">(575) 640-7463</a> or email <a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a>.';
+          });
+      });
+    })();
+  </script>
+
+</body>
+</html>

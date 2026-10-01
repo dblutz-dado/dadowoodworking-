@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commission a Piece — dadowoodworking</title>
+<meta name="description" content="Start a custom furniture commission with dadowoodworking: handcrafted dining tables, cabinetry, and bookcases from Chamberino, NM — free delivery across NM, TX, and AZ." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<style>
+  /* ---------- Hero ---------- */
+  .cx-hero {
+    max-width: 1360px; margin: 0 auto;
+    padding: clamp(56px, 9vh, 96px) clamp(24px, 5vw, 72px) 48px;
+    display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 56px; align-items: center;
+  }
+  .cx-hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500; margin-bottom: 20px;
+  }
+  .cx-hero .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--walnut); }
+  .cx-hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(40px, 5.4vw, 72px); line-height: 1.04;
+    letter-spacing: -0.02em; max-width: 20ch;
+  }
+  .cx-hero h1 em { font-style: italic; color: var(--walnut); }
+  .cx-hero p.lede {
+    margin-top: 22px; max-width: 62ch;
+    font-size: clamp(16px, 1.15vw, 18px); line-height: 1.65;
+    color: rgba(26,20,16,0.78);
+  }
+  .cx-hero .cta-row { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .cx-hero .visual {
+    position: relative; aspect-ratio: 4 / 5;
+    background: var(--cream-warm); border-radius: 2px; overflow: hidden;
+  }
+  .cx-hero .visual img { width: 100%; height: 100%; object-fit: cover; }
+  .cx-hero .visual::after {
+    content: ''; position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(15,8,4,0.08); pointer-events: none;
+  }
+
+  /* ---------- Process (steps) ---------- */
+  .process {
+    max-width: 1360px; margin: 0 auto;
+    padding: 72px clamp(24px, 5vw, 72px);
+    border-top: 1px solid rgba(26,20,16,0.1);
+  }
+  .process .heading {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: 56px; align-items: end; margin-bottom: 48px;
+  }
+  .process h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08;
+    letter-spacing: -0.02em; max-width: 16ch;
+  }
+  .process h2 em { font-style: italic; color: var(--walnut); }
+  .process .sub {
+    font-size: 15.5px; line-height: 1.65; color: rgba(26,20,16,0.72);
+    max-width: 62ch;
+  }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+  .step {
+    background: var(--cream); border: 1px solid rgba(26,20,16,0.1);
+    border-radius: 4px; padding: 24px 22px 28px; position: relative;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .step .num {
+    font-family: 'Fraunces', serif; font-weight: 400; font-style: italic;
+    font-size: 40px; color: var(--walnut); line-height: 1;
+  }
+  .step h3 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 20px; letter-spacing: -0.01em; line-height: 1.2;
+  }
+  .step p {
+    font-size: 14px; line-height: 1.6; color: rgba(26,20,16,0.75);
+  }
+  .step .meta {
+    margin-top: auto; padding-top: 12px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(26,20,16,0.5);
+  }
+
+  /* ---------- What I build / What I don't ---------- */
+  .scope {
+    background: var(--cream-warm);
+    padding: 72px clamp(24px, 5vw, 72px);
+  }
+  .scope .inner {
+    max-width: 1360px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+  }
+  .scope h3 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 26px; letter-spacing: -0.01em; margin-bottom: 20px;
+  }
+  .scope h3 em { font-style: italic; color: var(--walnut); }
+  .scope ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .scope li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 15px; line-height: 1.55; color: rgba(26,20,16,0.82);
+    padding-left: 0;
+  }
+  .scope li::before {
+    content: ''; flex: none; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--walnut); margin-top: 9px;
+  }
+  .scope .not li::before { background: rgba(26,20,16,0.35); }
+  .scope .not { border-left: 1px solid rgba(26,20,16,0.15); padding-left: 40px; }
+
+  /* ---------- Pricing / lead time ---------- */
+  .price {
+    max-width: 1360px; margin: 0 auto;
+    padding: 72px clamp(24px, 5vw, 72px);
+  }
+  .price h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.02em;
+    margin-bottom: 12px; max-width: 22ch;
+  }
+  .price h2 em { font-style: italic; color: var(--walnut); }
+  .price > p.lede {
+    max-width: 62ch; font-size: 16px; line-height: 1.65;
+    color: rgba(26,20,16,0.78); margin-bottom: 40px;
+  }
+  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .price-card {
+    background: var(--cream); border: 1px solid rgba(26,20,16,0.1);
+    border-radius: 4px; padding: 28px 26px;
+  }
+  .price-card .label {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55); margin-bottom: 14px;
+  }
+  .price-card h3 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 24px; letter-spacing: -0.01em; margin-bottom: 8px;
+  }
+  .price-card .range {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 22px; color: var(--walnut); margin-bottom: 12px;
+  }
+  .price-card p {
+    font-size: 14.5px; line-height: 1.6; color: rgba(26,20,16,0.75);
+  }
+  .price-note {
+    margin-top: 24px; padding: 16px 20px;
+    background: rgba(26,20,16,0.04); border-left: 3px solid var(--walnut);
+    font-size: 14px; line-height: 1.6; color: rgba(26,20,16,0.75);
+    max-width: 78ch;
+  }
+
+  /* ---------- Form ---------- */
+  .form-wrap {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 96px clamp(24px, 5vw, 72px);
+  }
+  .form-inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 72px;
+  }
+  .form-inner .intro .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--amber-hot); font-weight: 500; margin-bottom: 20px;
+  }
+  .form-inner .intro .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--amber-hot); }
+  .form-inner .intro h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(28px, 3vw, 42px); line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .form-inner .intro h2 em { font-style: italic; color: var(--amber-hot); }
+  .form-inner .intro p {
+    font-size: 16px; line-height: 1.65; color: var(--cream-soft);
+    margin-bottom: 18px; max-width: 44ch;
+  }
+  .form-inner .intro .contact-line {
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid rgba(244,237,225,0.12);
+    font-size: 14.5px; line-height: 1.7; color: var(--cream-soft);
+  }
+  .form-inner .intro .contact-line a {
+    color: var(--amber-hot); text-decoration: none;
+    border-bottom: 1px solid rgba(217,151,87,0.4);
+  }
+
+  form.commission-form { display: flex; flex-direction: column; gap: 20px; }
+  form.commission-form .row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+  form.commission-form .field { display: flex; flex-direction: column; gap: 8px; }
+  form.commission-form label {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--cream-soft); font-weight: 500;
+  }
+  form.commission-form label .req { color: var(--amber-hot); }
+  form.commission-form input,
+  form.commission-form select,
+  form.commission-form textarea {
+    background: rgba(244,237,225,0.05);
+    border: 1px solid rgba(244,237,225,0.16);
+    color: var(--cream); font: inherit;
+    padding: 14px 16px; border-radius: 3px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  form.commission-form textarea { min-height: 130px; resize: vertical; font-family: inherit; }
+  form.commission-form input:focus,
+  form.commission-form select:focus,
+  form.commission-form textarea:focus {
+    outline: none;
+    border-color: var(--amber-hot);
+    background: rgba(244,237,225,0.09);
+  }
+  form.commission-form select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--cream-soft) 50%), linear-gradient(135deg, var(--cream-soft) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 44px; }
+  form.commission-form .checkbox-row {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13.5px; line-height: 1.55; color: var(--cream-soft);
+  }
+  form.commission-form .checkbox-row input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--amber); }
+  form.commission-form .submit-row {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 20px; flex-wrap: wrap; margin-top: 8px;
+  }
+  form.commission-form .submit-row .note {
+    font-size: 13px; color: rgba(244,237,225,0.55); max-width: 34ch;
+  }
+  form.commission-form button {
+    background: var(--amber); color: #1a1006;
+    border: 1px solid var(--amber);
+    padding: 15px 30px; border-radius: 4px;
+    font: inherit; font-weight: 500; letter-spacing: 0.02em;
+    cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  form.commission-form button:hover {
+    background: var(--amber-hot); border-color: var(--amber-hot);
+    transform: translateY(-1px);
+  }
+  form.commission-form button svg { width: 16px; height: 16px; }
+
+  /* Success / error message (hidden until JS toggles) */
+  .form-msg { display: none; padding: 16px 20px; border-radius: 3px; font-size: 14.5px; line-height: 1.55; }
+  .form-msg.success { display: block; background: rgba(200, 137, 74, 0.14); border: 1px solid rgba(200, 137, 74, 0.4); color: var(--cream); }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    max-width: 900px; margin: 0 auto;
+    padding: 96px clamp(24px, 5vw, 72px);
+  }
+  .faq h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.02em;
+    margin-bottom: 40px; text-align: center;
+  }
+  .faq h2 em { font-style: italic; color: var(--walnut); }
+  .faq details {
+    border-top: 1px solid rgba(26,20,16,0.12);
+    padding: 22px 0;
+  }
+  .faq details:last-of-type { border-bottom: 1px solid rgba(26,20,16,0.12); }
+  .faq summary {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 20px; letter-spacing: -0.01em; cursor: pointer;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+'; font-family: 'Inter', sans-serif; font-weight: 400;
+    font-size: 22px; color: var(--walnut); transition: transform 0.2s ease;
+    line-height: 1;
+  }
+  .faq details[open] summary::after { content: '−'; }
+  .faq details p {
+    margin-top: 14px; font-size: 15.5px; line-height: 1.7;
+    color: rgba(26,20,16,0.75); max-width: 68ch;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 900px) {
+    .cx-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; }
+    .cx-hero .visual { aspect-ratio: 4 / 3; order: -1; }
+    .process .heading { grid-template-columns: 1fr; gap: 24px; }
+    .steps { grid-template-columns: 1fr; }
+    .scope .inner { grid-template-columns: 1fr; gap: 40px; }
+    .scope .not { border-left: 0; padding-left: 0; border-top: 1px solid rgba(26,20,16,0.15); padding-top: 40px; }
+    .price-grid { grid-template-columns: 1fr; }
+    .form-inner { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+    form.commission-form .row { grid-template-columns: minmax(0,1fr); }
+  }
+  .logo-img { width: 44px !important; height: 44px !important; display: block; flex: none; color: initial; border-radius: 2px; }
+  #form-msg.error { color: #9b2c1f; }
+  #form-msg.error a { color: inherit; text-decoration: underline; }
+  form select, form input, form textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }
+</style>
+  <link rel="icon" type="image/png" href="brand/favicon.png" />
+<!-- SEO:START -->
+<style id="mobile-fixes">
+footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+.menu-toggle, .mobile-menu { display: none; }
+@media (max-width: 900px) {
+  nav.primary { margin-left: auto; }
+  .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; flex: none; background: transparent; color: inherit;
+    border: 1px solid currentColor; border-radius: 999px; cursor: pointer; padding: 0; opacity: .9; }
+  .menu-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu:not([hidden]) { display: flex; position: fixed; inset: 0; z-index: 10000; background: #1a1410;
+    flex-direction: column; justify-content: center; align-items: center; padding: 80px 24px; }
+  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .mobile-menu nav a { font-family: 'Fraunces', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f4ede3;
+    text-decoration: none; letter-spacing: 0; text-transform: none; }
+  .mobile-menu nav a.current { color: #d49a5c; }
+  .mobile-menu nav a.current::after { display: none; }
+  .mobile-menu nav a.phone-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+    font-family: inherit; font-size: 17px; padding: 12px 22px; border: 1px solid rgba(244,237,227,.5); border-radius: 999px; }
+  .mobile-menu nav a.phone-link svg { width: 18px; height: 18px; }
+  .mobile-menu-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(244,237,227,.6); color: #f4ede3; cursor: pointer; }
+  .mobile-menu-close span { position: absolute; left: 12px; top: 21px; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu-close span:first-child { transform: rotate(45deg); }
+  .mobile-menu-close span:last-child { transform: rotate(-45deg); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+  .form-inner { grid-template-columns: minmax(0, 1fr) !important; }
+  .form-inner > * { min-width: 0; }
+}
+@media (max-width: 480px) {
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 44px; height: 44px;
+    display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0; }
+}
+</style>
+<script src="menu.js" defer></script>
+<link rel="canonical" href="https://www.dadowoodworking.com/commission" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="dadowoodworking" />
+<meta property="og:title" content="Commission a Piece — dadowoodworking" />
+<meta property="og:description" content="Start a custom furniture commission with dadowoodworking: handcrafted dining tables, cabinetry, and bookcases from Chamberino, NM — free delivery across NM, TX, and AZ." />
+<meta property="og:url" content="https://www.dadowoodworking.com/commission" />
+<meta property="og:image" content="https://www.dadowoodworking.com/brand/dadowoodworking-custom-furniture-share.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Commission a Piece — dadowoodworking" />
+<meta name="twitter:description" content="Start a custom furniture commission with dadowoodworking: handcrafted dining tables, cabinetry, and bookcases from Chamberino, NM — free delivery across NM, TX, and AZ." />
+<meta name="twitter:image" content="https://www.dadowoodworking.com/brand/dadowoodworking-custom-furniture-share.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["LocalBusiness", "FurnitureStore"], "@id": "https://www.dadowoodworking.com/#business", "name": "dadowoodworking", "alternateName": ["Dado Woodworking", "dadowoodworking.com"], "description": "Custom legacy-grade hardwood furniture, museum-quality picture framing, and custom architectural additions, handmade by Doug Lutz in Chamberino, New Mexico.", "url": "https://www.dadowoodworking.com/", "logo": "https://www.dadowoodworking.com/brand/dadowoodworking-logo.png", "image": "https://www.dadowoodworking.com/workshop-hero-dado-woodworking.jpg", "telephone": "+1-575-640-7463", "email": "dblutz@gmail.com", "founder": {"@type": "Person", "name": "Douglas Lutz"}, "address": {"@type": "PostalAddress", "streetAddress": "650 La Vina Road", "addressLocality": "Chamberino", "addressRegion": "NM", "postalCode": "88027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00", "description": "By appointment only"}], "areaServed": [{"@type": "City", "name": "Las Cruces, NM"}, {"@type": "City", "name": "El Paso, TX"}, {"@type": "City", "name": "Albuquerque, NM"}, {"@type": "City", "name": "Santa Fe, NM"}, {"@type": "City", "name": "Tucson, AZ"}, {"@type": "City", "name": "Phoenix, AZ"}, {"@type": "City", "name": "Midland–Odessa, TX"}, {"@type": "City", "name": "Dallas–Fort Worth, TX"}, {"@type": "City", "name": "Austin, TX"}, {"@type": "City", "name": "San Antonio, TX"}, {"@type": "City", "name": "Houston, TX"}], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom hardwood furniture"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom cabinetry and built-ins"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Museum-quality picture framing"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture repair and restoration"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom fireplace mantels and architectural additions"}}], "sameAs": ["https://www.angi.com/companylist/us/nm/anthony/dadowoodworkingcom-reviews-1.htm", "https://reviews.birdeye.com/dadowoodworkingcom-167599908273697"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dadowoodworking.com/"}, {"@type": "ListItem", "position": 2, "name": "Commission", "item": "https://www.dadowoodworking.com/commission"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you work with clients outside New Mexico, Texas, and Arizona?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I deliver locally, and delivery is available throughout the U.S. Tell me where you are and we'll work out the details in your quote."}}, {"@type": "Question", "name": "How long does a commission take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the piece. I never compromise quality for time, and I give every client a realistic schedule that works with their life."}}, {"@type": "Question", "name": "Can I bring my own design or sketch?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Whether it's the type of wood, the finish, the size, or a design detail, I'll work closely with you to bring your idea to life."}}, {"@type": "Question", "name": "Do you offer a guarantee?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I only work with the best materials available and provide a one-year guarantee on all labor."}}, {"@type": "Question", "name": "Do you do repairs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I've repaired, reinforced, and restored chairs, tables, and furniture damaged in moves. Call to talk about your piece."}}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+  <div class="announce">
+    Now booking commissions — delivery available nationwide.
+    <a href="#form">Start a conversation &rarr;</a>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="dadowoodworking home">
+      <img class="logo-mark logo-img" src="brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
+      <span>
+        <span class="logo-text">dadowoodworking</span>
+        <div class="logo-sub">Chamberino, NM</div>
+      </span>
+    </a>
+
+    <nav class="primary" aria-label="Primary">
+      <a href="gallery.html">Gallery</a>
+      <a href="commission.html" class="current">Commission</a>
+      <a href="contact.html">Contact</a>
+      <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (575) 640-7463
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="cx-hero">
+    <div>
+      <nav class="crumbs breadcrumb-trail" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current" aria-current="page">Commission</span></nav>
+      <div class="eyebrow">Commission a piece</div>
+      <h1>Built for you, from the <em>first sketch</em> to the day it's placed in your room.</h1>
+      <p class="lede">Every piece I make is custom. We talk about the room, the way the piece needs to work, and the woods you love. Then I sketch, I build, and I deliver it myself. No showrooms, no factories, no middlemen — just the two of us and the piece, from beginning to end.</p>
+      <div class="cta-row">
+        <a href="#form" class="btn btn-primary">
+          Start a commission
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="gallery.html" class="btn btn-ghost">See recent work</a>
+      </div>
+    </div>
+    <div class="visual">
+      <img src="pieces/stahman-farms-coffee-table-with-doug-lutz-dado-woodworking.jpg" alt="Doug Lutz of dadowoodworking with the finished Stahman Farms pecan coffee table" style="object-position: center 30%;" />
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="heading">
+      <h2>How a <em>commission</em> comes together.</h2>
+      <p class="sub">Every piece is different, so timing depends on the design, the wood, and the size. I give every client a realistic schedule up front and keep you updated along the way.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>First conversation</h3><p>A short call or email. You tell me about the room, how the piece will be used, and what you like. I ask about wood, size, and timing.</p><div class="meta">Free</div></div>
+      <div class="step"><div class="num">02</div><h3>Design &amp; quote</h3><p>I work closely with you on wood, finish, size, and design details, then send a written quote with a price and a realistic schedule.</p><div class="meta">Written quote</div></div>
+      <div class="step"><div class="num">03</div><h3>Materials</h3><p>Once the quote is approved, I select the boards for your piece. I only work with the best materials available.</p><div class="meta">Terms in your quote</div></div>
+      <div class="step"><div class="num">04</div><h3>Build</h3><p>Your piece is built by hand in my Chamberino workshop. I never compromise quality for time.</p><div class="meta">Realistic schedule</div></div>
+      <div class="step"><div class="num">05</div><h3>Delivery</h3><p>I deliver locally, and delivery is available throughout the U.S. Every piece comes with a one-year guarantee on all labor.</p><div class="meta">1-year labor guarantee</div></div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="scope">
+    <div class="inner">
+      <div>
+        <h3>What I <em>build</em></h3>
+        <ul>
+          <li>Dining tables and coffee tables</li>
+          <li>Cabinetry and built-ins</li>
+          <li>Credenzas, buffets, and media cabinets</li>
+          <li>Bookcases and bookshelves</li>
+          <li>Desks and console tables</li>
+          <li>Chests of drawers, bed frames, and bedroom furniture</li>
+          <li>Chairs</li>
+        </ul>
+      </div>
+      <div class="not">
+        <h3>Also <em>available</em></h3>
+        <ul>
+          <li>Museum-quality picture framing for artwork, photography, and heirlooms</li>
+          <li>Custom architectural additions, such as fireplace mantels</li>
+          <li>Furniture repair and restoration</li>
+          <li>Help with commercial installations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="price" id="pricing">
+    <h2>What a <em>commission</em> costs.</h2>
+    <p class="lede">Every piece is priced individually, because the wood, the design, and the hours are different every time. Tell me what you have in mind and I'll send you a written quote. There's no charge for the first conversation.</p>
+    <div class="price-note">
+      <strong>Included with every piece:</strong> design help, material selection, and a one-year guarantee on all labor. Delivery details are covered in your quote.
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-wrap" id="form">
+    <div class="form-inner">
+      <div class="intro">
+        <div class="eyebrow">Start a commission</div>
+        <h2>Tell me about the <em>piece</em>.</h2>
+        <p>You don't need to know exactly what you want. A room, a rough idea, and a photo or two is enough for a first conversation. I'll get back to you as soon as I can.</p>
+        <p>Prefer to talk it through? Call me directly.</p>
+        <div class="contact-line">
+          <div><strong>Doug at dadowoodworking</strong></div>
+          <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+          <div><a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a></div>
+          <div>650 La Vina Road, Chamberino, NM 88027</div>
+        </div>
+      </div>
+
+      <form class="commission-form" id="commission-form" novalidate>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <div class="row">
+          <div class="field">
+            <label for="cx-name">Your name <span class="req">*</span></label>
+            <input type="text" id="cx-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cx-city">City <span class="req">*</span></label>
+            <input type="text" id="cx-city" name="city" required placeholder="El Paso, Austin, Santa Fe…" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="cx-email">Email <span class="req">*</span></label>
+            <input type="email" id="cx-email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="cx-phone">Phone</label>
+            <input type="tel" id="cx-phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="cx-type">What are you thinking about?</label>
+            <select id="cx-type" name="piece_type">
+              <option value="">Choose a piece type (optional)</option>
+              <option>Dining table</option>
+              <option>Cabinetry / built-ins</option>
+              <option>Credenza / buffet / sideboard</option>
+              <option>Bookcase / bookshelf</option>
+              <option>Desk</option>
+              <option>Coffee or console table</option>
+              <option>Chest of drawers / dresser</option>
+              <option>Bed / headboard</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cx-budget">Budget range</label>
+            <select id="cx-budget" name="budget">
+              <option value="">Choose a range (optional)</option>
+              <option>Under $2,500</option>
+              <option>$2,500 – $7,500</option>
+              <option>$7,500 – $15,000</option>
+              <option>$15,000 – $30,000</option>
+              <option>$30,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cx-timeline">Timeline</label>
+          <select id="cx-timeline" name="timeline">
+            <option value="">When would you like the piece delivered? (optional)</option>
+            <option>As soon as possible</option>
+            <option>Within 3 months</option>
+            <option>Within 6 months</option>
+            <option>Within a year</option>
+            <option>No rush</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cx-details">Tell me about the piece <span class="req">*</span></label>
+          <textarea id="cx-details" name="details" required placeholder="What room is it for? What size are you thinking? Any woods you love? Any pictures in your head of what it should feel like? Anything you already know you don't want?"></textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="visit" />
+          <span>I'd be open to a home visit for measurements and a first look at the room .</span>
+        </label>
+
+        <div class="submit-row">
+          <button type="submit">
+            Send this to Doug
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+          <div class="note">I'll get back to you as soon as I can. To talk sooner, call (575) 640-7463.</div>
+        </div>
+
+        <div class="form-msg" id="form-msg" role="status" aria-live="polite">
+          Thanks — your note is on the way to Doug. I'll be in touch soon.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Common <em>questions</em>.</h2>
+    <details><summary>Do you work with clients outside New Mexico, Texas, and Arizona?</summary><p>Yes. I deliver locally, and delivery is available throughout the U.S. Tell me where you are and we'll work out the details in your quote.</p></details>
+    <details><summary>How long does a commission take?</summary><p>It depends on the piece. I never compromise quality for time, and I give every client a realistic schedule that works with their life.</p></details>
+    <details><summary>Can I bring my own design or sketch?</summary><p>Yes. Whether it's the type of wood, the finish, the size, or a design detail, I'll work closely with you to bring your idea to life.</p></details>
+    <details><summary>Do you offer a guarantee?</summary><p>Yes. I only work with the best materials available and provide a one-year guarantee on all labor.</p></details>
+    <details><summary>Do you do repairs?</summary><p>Yes. I've repaired, reinforced, and restored chairs, tables, and furniture damaged in moves. Call to talk about your piece.</p></details>
+  </section>
+
+  <!-- CROSS-LINK CHIPS -->
+  <section class="also-serving">
+    <div class="head">Delivered <em>free</em> across the Southwest.</div>
+    <div class="city-chips">
+      <a href="albuquerque.html"><span>Albuquerque</span> <span class="abbr">NM</span></a>
+      <a href="santa-fe.html"><span>Santa Fe</span> <span class="abbr">NM</span></a>
+      <a href="las-cruces.html"><span>Las Cruces</span> <span class="abbr">NM</span></a>
+      <a href="el-paso.html"><span>El Paso</span> <span class="abbr">TX</span></a>
+      <a href="dallas.html"><span>Dallas</span> <span class="abbr">TX</span></a>
+      <a href="austin.html"><span>Austin</span> <span class="abbr">TX</span></a>
+      <a href="houston.html"><span>Houston</span> <span class="abbr">TX</span></a>
+      <a href="san-antonio.html"><span>San Antonio</span> <span class="abbr">TX</span></a>
+      <a href="midland-odessa.html"><span>Midland–Odessa</span> <span class="abbr">TX</span></a>
+      <a href="tucson.html"><span>Tucson</span> <span class="abbr">AZ</span></a>
+      <a href="phoenix.html"><span>Phoenix</span> <span class="abbr">AZ</span></a>
+      <a href="locations.html"><span>See all service areas</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="locations.html">Service areas</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
+
+  <script>
+    // Sends form submissions to dblutz@gmail.com via FormSubmit (formsubmit.co).
+    (function () {
+      var form = document.getElementById('commission-form');
+      var msg = document.getElementById('form-msg');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (form.querySelector('[name=_honey]') && form.querySelector('[name=_honey]').value) return;
+        var btn = form.querySelector('button[type=submit]');
+        var data = {};
+        Array.prototype.forEach.call(form.elements, function (el) {
+          if (!el.name || el.name === '_honey') return;
+          if (el.type === 'checkbox') { data[el.name] = el.checked ? 'Yes' : 'No'; return; }
+          data[el.name] = el.value;
+        });
+        data._subject = 'New commission request' + (data.name ? ' from ' + data.name : '');
+        data._template = 'table';
+        data._captcha = 'false';
+        if (data.email) data._replyto = data.email;
+        btn.disabled = true;
+        msg.classList.remove('success', 'error');
+        msg.textContent = 'Sending…';
+        fetch('https://formsubmit.co/ajax/dblutz@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'Send failed');
+            msg.classList.add('success');
+            msg.textContent = "Thanks — your note is on the way to Doug. I'll be in touch soon.";
+            form.reset();
+            msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          })
+          .catch(function () {
+            btn.disabled = false;
+            msg.classList.add('error');
+            msg.innerHTML = 'Sorry, your message didn\'t go through. Please call <a href="tel:+15756407463">(575) 640-7463</a> or email <a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a>.';
+          });
+      });
+    })();
+  </script>
+
+</body>
+</html>

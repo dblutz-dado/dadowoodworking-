@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cypress Corner Cabinets — Handmade Custom Furniture | dadowoodworking</title>
+<meta name="description" content="Cypress Corner Cabinets, black walnut offset with cypress. Handmade to order in Chamberino, NM, with free delivery across New Mexico, Texas, and Arizona." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared.css" />
+<style>
+  .piece-detail {
+    max-width: 1360px; margin: 0 auto;
+    padding: 48px clamp(24px, 5vw, 72px) 32px;
+  }
+  .breadcrumb {
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 32px;
+  }
+  .breadcrumb a { color: inherit; text-decoration: none; }
+  .breadcrumb a:hover { color: var(--walnut); }
+  .breadcrumb .sep { color: rgba(26,20,16,0.3); }
+  .breadcrumb .current { color: var(--ink); }
+
+  .piece-grid {
+    display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 64px; align-items: start;
+  }
+  .piece-image {
+    position: relative;
+    background: var(--cream-warm);
+    border-radius: 2px; overflow: hidden;
+  }
+  .piece-image img { width: 100%; height: auto; display: block; }
+  .piece-image::after {
+    content: ''; position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(15,8,4,0.08); pointer-events: none;
+  }
+  .piece-info .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500; margin-bottom: 20px;
+  }
+  .piece-info .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--walnut); }
+  .piece-info h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px); line-height: 1.08;
+    letter-spacing: -0.02em; max-width: 20ch;
+  }
+  .piece-info .sub {
+    margin-top: 12px;
+    font-family: 'Fraunces', serif; font-weight: 400; font-style: italic;
+    font-size: clamp(18px, 1.6vw, 22px); color: var(--walnut);
+  }
+  .piece-info .desc {
+    margin-top: 32px;
+    display: flex; flex-direction: column; gap: 16px;
+    font-size: 16px; line-height: 1.7; color: rgba(26,20,16,0.82);
+  }
+  .piece-info .spec {
+    margin-top: 36px; padding-top: 28px;
+    border-top: 1px solid rgba(26,20,16,0.14);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px;
+  }
+  .piece-info .spec .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(26,20,16,0.5); margin-bottom: 4px;
+  }
+  .piece-info .spec .val {
+    font-size: 15px; line-height: 1.5; color: var(--ink);
+  }
+  .piece-info .status {
+    display: inline-block; padding: 6px 12px; margin-top: 24px;
+    border: 1px solid rgba(107,63,34,0.25); border-radius: 999px;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--walnut); background: rgba(107,63,34,0.06);
+  }
+  .piece-info .cta-row {
+    margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px;
+  }
+
+  /* --- Similar pieces --- */
+  .similar {
+    max-width: 1360px; margin: 0 auto;
+    padding: 72px clamp(24px, 5vw, 72px) 24px;
+    border-top: 1px solid rgba(26,20,16,0.1);
+  }
+  .similar h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(24px, 2.4vw, 32px); letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+  .similar h2 em { font-style: italic; color: var(--walnut); }
+  .similar-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .similar-card {
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+    background: var(--cream); border: 1px solid rgba(26,20,16,0.1);
+    border-radius: 4px; overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .similar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(15,8,4,0.10);
+    border-color: rgba(26,20,16,0.2);
+  }
+  .similar-card .img { aspect-ratio: 4 / 3; background: var(--cream-warm); overflow: hidden; }
+  .similar-card .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .similar-card .body { padding: 18px 20px 22px; }
+  .similar-card h3 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 20px; letter-spacing: -0.01em; line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .similar-card .cat {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55);
+  }
+
+  /* --- CTA band --- */
+  .piece-cta {
+    background: var(--ink); color: var(--cream);
+    padding: 72px clamp(24px, 5vw, 72px); margin-top: 72px;
+  }
+  .piece-cta .inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: minmax(0, 1.4fr) auto;
+    gap: 32px; align-items: center;
+  }
+  .piece-cta h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.01em;
+  }
+  .piece-cta h2 em { font-style: italic; color: var(--amber-hot); }
+  .piece-cta p {
+    margin-top: 12px; color: var(--cream-soft);
+    max-width: 52ch; font-size: 15px; line-height: 1.6;
+  }
+  .piece-cta .btn-primary { background: var(--amber); color: #1a1006; border-color: var(--amber); }
+
+  @media (max-width: 900px) {
+    .piece-grid { grid-template-columns: 1fr; gap: 32px; }
+    .piece-info .spec { grid-template-columns: 1fr; gap: 14px; }
+    .similar-grid { grid-template-columns: 1fr; }
+    .piece-cta .inner { grid-template-columns: 1fr; }
+  }
+  .logo-img { width: 44px !important; height: 44px !important; display: block; flex: none; color: initial; border-radius: 2px; }
+  .thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 10px; margin-top: 12px; }
+  .thumbs .thumb { padding: 0; border: 1px solid rgba(26,20,16,0.15); background: none; cursor: pointer; aspect-ratio: 1 / 1; overflow: hidden; }
+  .thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .thumbs .thumb:hover { border-color: var(--walnut); }
+</style>
+  <link rel="icon" type="image/png" href="../brand/favicon.png" />
+<!-- SEO:START -->
+<style id="mobile-fixes">
+footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+.menu-toggle, .mobile-menu { display: none; }
+@media (max-width: 900px) {
+  nav.primary { margin-left: auto; }
+  .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; flex: none; background: transparent; color: inherit;
+    border: 1px solid currentColor; border-radius: 999px; cursor: pointer; padding: 0; opacity: .9; }
+  .menu-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu:not([hidden]) { display: flex; position: fixed; inset: 0; z-index: 10000; background: #1a1410;
+    flex-direction: column; justify-content: center; align-items: center; padding: 80px 24px; }
+  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .mobile-menu nav a { font-family: 'Fraunces', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f4ede3;
+    text-decoration: none; letter-spacing: 0; text-transform: none; }
+  .mobile-menu nav a.current { color: #d49a5c; }
+  .mobile-menu nav a.current::after { display: none; }
+  .mobile-menu nav a.phone-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+    font-family: inherit; font-size: 17px; padding: 12px 22px; border: 1px solid rgba(244,237,227,.5); border-radius: 999px; }
+  .mobile-menu nav a.phone-link svg { width: 18px; height: 18px; }
+  .mobile-menu-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(244,237,227,.6); color: #f4ede3; cursor: pointer; }
+  .mobile-menu-close span { position: absolute; left: 12px; top: 21px; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu-close span:first-child { transform: rotate(45deg); }
+  .mobile-menu-close span:last-child { transform: rotate(-45deg); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+  .form-inner { grid-template-columns: minmax(0, 1fr) !important; }
+  .form-inner > * { min-width: 0; }
+}
+@media (max-width: 480px) {
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 44px; height: 44px;
+    display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0; }
+}
+</style>
+<script src="../menu.js" defer></script>
+<link rel="canonical" href="https://www.dadowoodworking.com/pieces_pages/cypress-corner-cabinets" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="dadowoodworking" />
+<meta property="og:title" content="Cypress Corner Cabinets — Handmade Custom Furniture | dadowoodworking" />
+<meta property="og:description" content="Cypress Corner Cabinets, black walnut offset with cypress. Handmade to order in Chamberino, NM, with free delivery across New Mexico, Texas, and Arizona." />
+<meta property="og:url" content="https://www.dadowoodworking.com/pieces_pages/cypress-corner-cabinets" />
+<meta property="og:image" content="https://www.dadowoodworking.com/pieces/cypress-corner-cabinets-dado-woodworking.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cypress Corner Cabinets — Handmade Custom Furniture | dadowoodworking" />
+<meta name="twitter:description" content="Cypress Corner Cabinets, black walnut offset with cypress. Handmade to order in Chamberino, NM, with free delivery across New Mexico, Texas, and Arizona." />
+<meta name="twitter:image" content="https://www.dadowoodworking.com/pieces/cypress-corner-cabinets-dado-woodworking.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["LocalBusiness", "FurnitureStore"], "@id": "https://www.dadowoodworking.com/#business", "name": "dadowoodworking", "alternateName": ["Dado Woodworking", "dadowoodworking.com"], "description": "Custom legacy-grade hardwood furniture, museum-quality picture framing, and custom architectural additions, handmade by Doug Lutz in Chamberino, New Mexico.", "url": "https://www.dadowoodworking.com/", "logo": "https://www.dadowoodworking.com/brand/dadowoodworking-logo.png", "image": "https://www.dadowoodworking.com/workshop-hero-dado-woodworking.jpg", "telephone": "+1-575-640-7463", "email": "dblutz@gmail.com", "founder": {"@type": "Person", "name": "Douglas Lutz"}, "address": {"@type": "PostalAddress", "streetAddress": "650 La Vina Road", "addressLocality": "Chamberino", "addressRegion": "NM", "postalCode": "88027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00", "description": "By appointment only"}], "areaServed": [{"@type": "City", "name": "Las Cruces, NM"}, {"@type": "City", "name": "El Paso, TX"}, {"@type": "City", "name": "Albuquerque, NM"}, {"@type": "City", "name": "Santa Fe, NM"}, {"@type": "City", "name": "Tucson, AZ"}, {"@type": "City", "name": "Phoenix, AZ"}, {"@type": "City", "name": "Midland–Odessa, TX"}, {"@type": "City", "name": "Dallas–Fort Worth, TX"}, {"@type": "City", "name": "Austin, TX"}, {"@type": "City", "name": "San Antonio, TX"}, {"@type": "City", "name": "Houston, TX"}], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom hardwood furniture"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom cabinetry and built-ins"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Museum-quality picture framing"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture repair and restoration"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom fireplace mantels and architectural additions"}}], "sameAs": ["https://www.angi.com/companylist/us/nm/anthony/dadowoodworkingcom-reviews-1.htm", "https://reviews.birdeye.com/dadowoodworkingcom-167599908273697"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dadowoodworking.com/"}, {"@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.dadowoodworking.com/gallery"}, {"@type": "ListItem", "position": 3, "name": "Cypress Corner Cabinets", "item": "https://www.dadowoodworking.com/pieces_pages/cypress-corner-cabinets"}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+  <div class="announce">
+    Now booking commissions — free delivery across New Mexico, Texas, and Arizona.
+    <a href="../commission.html">Start a conversation &rarr;</a>
+  </div>
+
+  <header class="site-header">
+    <a href="../index.html" class="logo" aria-label="dadowoodworking home">
+      <img class="logo-mark logo-img" src="../brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
+      <span>
+        <span class="logo-text">dadowoodworking</span>
+        <div class="logo-sub">Chamberino, NM</div>
+      </span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="../gallery.html" class="current">Gallery</a>
+      <a href="../commission.html">Commission</a>
+      
+      <a href="../contact.html">Contact</a>
+      <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (575) 640-7463
+      </a>
+    </nav>
+  </header>
+
+  <section class="piece-detail">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="../gallery.html">Gallery</a>
+      <span class="sep">/</span>
+      <span class="current">Cypress Corner Cabinets</span>
+    </div>
+
+    <div class="piece-grid">
+      <div class="piece-image">
+        <img id="piece-main" src="../pieces/cypress-corner-cabinets-dado-woodworking.jpg" alt="Cypress Corner Cabinets — Black walnut offset with cypress" />
+        <div class="thumbs"><button type="button" class="thumb" onclick="var m=document.getElementById('piece-main');m.src=this.querySelector('img').src;m.alt=this.querySelector('img').alt;"><img src="../pieces/cypress-corner-cabinets-dado-woodworking.jpg" alt="Cypress Corner Cabinets — Black walnut offset with cypress" loading="lazy" /></button><button type="button" class="thumb" onclick="var m=document.getElementById('piece-main');m.src=this.querySelector('img').src;m.alt=this.querySelector('img').alt;"><img src="../pieces/cypress-corner-cabinet-detail-dado-woodworking.jpg" alt="Cypress corner cabinet with decorative pattern and latch" loading="lazy" /></button><button type="button" class="thumb" onclick="var m=document.getElementById('piece-main');m.src=this.querySelector('img').src;m.alt=this.querySelector('img').alt;"><img src="../pieces/cypress-corner-cabinet-glass-doors-dado-woodworking.jpg" alt="Cypress corner cabinet with glass doors holding books, bowls, and bottles" loading="lazy" /></button><button type="button" class="thumb" onclick="var m=document.getElementById('piece-main');m.src=this.querySelector('img').src;m.alt=this.querySelector('img').alt;"><img src="../pieces/cypress-corner-cabinet-open-dado-woodworking.jpg" alt="Cypress corner cabinet with glass doors open" loading="lazy" /></button><button type="button" class="thumb" onclick="var m=document.getElementById('piece-main');m.src=this.querySelector('img').src;m.alt=this.querySelector('img').alt;"><img src="../pieces/cypress-corner-cabinets-dining-room-dado-woodworking.jpg" alt="Cypress corner cabinets installed in a dining room" loading="lazy" /></button></div>
+      </div>
+      <div class="piece-info">
+        <div class="eyebrow">Cabinetry</div>
+        <h1>Cypress Corner Cabinets</h1>
+        <div class="sub">Black walnut offset with cypress</div>
+
+        <div class="desc">
+          <p>A set of corner cabinets in cypress, offset with black walnut, with glass doors and a decorative pattern and latch. Built to hold books, dishes, and collected pieces, and shown here as a set of three.</p>
+          <p>Every piece is built to order. Wood, finish, size, and design details are chosen with you, so a commission inspired by this piece can be adjusted to fit your room and the way you'll use it.</p>
+        </div>
+
+        <div class="spec">
+          <div>
+            <div class="label">Material</div>
+            <div class="val">Cypress, black walnut</div>
+          </div>
+          <div>
+            <div class="label">Finish</div>
+            <div class="val">Selected with you</div>
+          </div>
+          <div>
+            <div class="label">Size</div>
+            <div class="val">Built to your dimensions</div>
+          </div>
+          <div>
+            <div class="label">Lead time</div>
+            <div class="val">Quoted with each commission</div>
+          </div>
+        </div>
+
+        <div class="status">Custom, made to order</div>
+
+        <div class="cta-row">
+          <a href="../commission.html" class="btn btn-primary">
+            Commission something similar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="tel:+15756407463" class="btn btn-ghost">Call (575) 640-7463</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="similar">
+    <h2>Related <em>work</em></h2>
+    <div class="similar-grid">
+      <a class="similar-card" href="custom-built-in-cabinetry.html">
+        <div class="img"><img src="../pieces/custom-built-in-cabinetry-dado-woodworking.jpg" alt="Custom Built-In Cabinetry" loading="lazy" /></div>
+        <div class="body">
+          <div class="cat">Cabinetry</div>
+          <h3>Custom Built-In Cabinetry</h3>
+        </div>
+      </a>
+      <a class="similar-card" href="red-grandis-liquor-cabinet.html">
+        <div class="img"><img src="../pieces/red-grandis-liquor-cabinet-dado-woodworking.jpg" alt="Red Grandis Liquor Cabinet" loading="lazy" /></div>
+        <div class="body">
+          <div class="cat">Cabinetry</div>
+          <h3>Red Grandis Liquor Cabinet</h3>
+        </div>
+      </a>
+      <a class="similar-card" href="cherry-console-stereo-cabinet.html">
+        <div class="img"><img src="../pieces/cherry-console-stereo-cabinet-dado-woodworking.jpg" alt="Cherry Console Stereo Cabinet" loading="lazy" /></div>
+        <div class="body">
+          <div class="cat">Media / Storage</div>
+          <h3>Cherry Console Stereo Cabinet</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="piece-cta">
+    <div class="inner">
+      <div>
+        <h2>Want something <em>like this</em>?</h2>
+        <p>Every piece I build is a one-off. If this looks close to what your room needs, start with a phone call. The first conversation is free.</p>
+      </div>
+      <a href="../commission.html" class="btn btn-primary">Start a commission</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="../brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="../locations.html">Service areas</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
+
+</body>
+</html>

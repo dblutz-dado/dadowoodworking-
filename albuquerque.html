@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Custom Hardwood Furniture in Albuquerque, NM — dadowoodworking</title>
+<meta name="description" content="Handcrafted dining tables, cabinetry, and bookcases delivered free to Albuquerque, New Mexico. Custom hardwood furniture from dadowoodworking in Chamberino, NM." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<style>
+  /* ---------- Page hero ---------- */
+  .loc-hero {
+    position: relative;
+    padding: clamp(64px, 10vh, 96px) clamp(24px, 5vw, 72px) 64px;
+    max-width: 1360px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: center;
+  }
+  .breadcrumb {
+    font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 24px;
+  }
+  .breadcrumb a { color: inherit; text-decoration: none; }
+  .breadcrumb .sep { color: rgba(26,20,16,0.3); }
+  .breadcrumb .current { color: var(--ink); }
+
+  .loc-hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500; margin-bottom: 20px;
+  }
+  .loc-hero .eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--walnut);
+  }
+  .loc-hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(40px, 5.4vw, 76px); line-height: 1.04;
+    letter-spacing: -0.02em; max-width: 18ch;
+  }
+  .loc-hero h1 em { font-style: italic; color: var(--walnut); }
+  .loc-hero .lede {
+    margin-top: 24px; max-width: 58ch;
+    font-size: clamp(16px, 1.15vw, 18px); line-height: 1.65;
+    color: rgba(26,20,16,0.78);
+  }
+  .loc-hero .cta-row { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+  .loc-hero .visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: var(--cream-warm);
+    border-radius: 2px; overflow: hidden;
+  }
+  .loc-hero .visual img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .loc-hero .visual::after {
+    content: '';
+    position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(15,8,4,0.08);
+    pointer-events: none;
+  }
+  .distance-chip {
+    position: absolute; bottom: 20px; left: 20px;
+    background: rgba(15,8,4,0.82); color: var(--cream);
+    padding: 10px 14px; border-radius: 4px;
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+
+  /* ---------- Stat / trust strip ---------- */
+  .trust-strip {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 28px clamp(24px, 5vw, 72px);
+  }
+  .trust-strip .inner {
+    max-width: 1360px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .trust-strip .item {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 14px; color: var(--cream-soft);
+  }
+  .trust-strip .num {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--amber-hot);
+    line-height: 1;
+  }
+
+  /* ---------- Why section ---------- */
+  .why {
+    max-width: 1360px; margin: 0 auto;
+    padding: 96px clamp(24px, 5vw, 72px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: 56px;
+  }
+  .why h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+  .why h2 em { font-style: italic; color: var(--walnut); }
+  .why .why-list { display: grid; gap: 32px; }
+  .why .item {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+  .why .item h3 {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: 22px; line-height: 1.25; letter-spacing: -0.005em;
+    margin-bottom: 10px;
+  }
+  .why .item p {
+    font-size: 15.5px; line-height: 1.65;
+    color: rgba(26,20,16,0.75); max-width: 60ch;
+  }
+
+  /* ---------- Featured pieces ---------- */
+  .featured {
+    background: var(--cream-warm);
+    padding: 96px clamp(24px, 5vw, 72px);
+  }
+  .featured .inner { max-width: 1360px; margin: 0 auto; }
+  .featured .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 32px; flex-wrap: wrap; margin-bottom: 40px;
+  }
+  .featured h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1;
+    letter-spacing: -0.015em; max-width: 22ch;
+  }
+  .featured h2 em { font-style: italic; color: var(--walnut); }
+  .featured .see-all {
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--walnut); text-decoration: none;
+    border-bottom: 1px solid rgba(107, 63, 34, 0.4);
+    padding-bottom: 2px;
+  }
+  .featured .see-all:hover { color: var(--ink); border-color: var(--ink); }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 24px;
+  }
+  .piece {
+    display: block; text-decoration: none; color: inherit;
+  }
+  .piece .frame {
+    position: relative; overflow: hidden;
+    background: var(--cream); border-radius: 2px;
+    aspect-ratio: 3 / 4;
+  }
+  .piece img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .piece:hover img { transform: scale(1.03); }
+  .piece .meta-title {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: 20px; margin-top: 14px; letter-spacing: -0.005em;
+  }
+  .piece .meta-sub {
+    margin-top: 4px; font-size: 13px;
+    color: rgba(26,20,16,0.6);
+  }
+
+  /* ---------- Delivery / neighborhoods ---------- */
+  .delivery {
+    max-width: 1360px; margin: 0 auto;
+    padding: 96px clamp(24px, 5vw, 72px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+  }
+  .delivery h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1;
+    letter-spacing: -0.015em; margin-bottom: 20px;
+  }
+  .delivery h2 em { font-style: italic; color: var(--walnut); }
+  .delivery p {
+    font-size: 16px; line-height: 1.65;
+    color: rgba(26,20,16,0.75); max-width: 55ch;
+  }
+  .neighborhoods {
+    background: var(--cream-warm);
+    padding: 32px;
+    border-radius: 2px;
+  }
+  .neighborhoods .label {
+    font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55); margin-bottom: 20px;
+  }
+  .neighborhoods ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+  }
+  .neighborhoods li {
+    font-family: 'Fraunces', serif; font-size: 17px;
+    color: var(--ink);
+    padding-left: 18px;
+    position: relative;
+  }
+  .neighborhoods li::before {
+    content: '';
+    position: absolute; left: 0; top: 12px;
+    width: 8px; height: 1px; background: var(--amber);
+  }
+
+  /* ---------- Testimonial ---------- */
+  .testimonial {
+    background: var(--ink); color: var(--cream);
+    padding: 96px clamp(24px, 5vw, 72px);
+    text-align: center;
+  }
+  .testimonial blockquote {
+    max-width: 42ch;
+    margin: 0 auto;
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-style: italic;
+    font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+  .testimonial cite {
+    display: block; margin-top: 24px;
+    font-family: 'Inter', sans-serif; font-style: normal;
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--amber-hot);
+  }
+
+  /* ---------- Final CTA ---------- */
+  .cta-band {
+    background: var(--cream-warm);
+    padding: 88px clamp(24px, 5vw, 72px);
+  }
+  .cta-band .inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 48px; align-items: center;
+  }
+  .cta-band h2 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(30px, 3.4vw, 44px); line-height: 1.15;
+    letter-spacing: -0.015em; max-width: 22ch;
+  }
+  .cta-band h2 em { font-style: italic; color: var(--walnut); }
+  .cta-band p {
+    margin-top: 14px; color: rgba(26,20,16,0.7);
+    max-width: 52ch; line-height: 1.6;
+  }
+
+  footer.site-footer {
+    background: var(--ink-2); color: var(--cream-soft);
+    padding: 48px clamp(24px, 5vw, 72px);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 24px;
+    font-size: 13px; letter-spacing: 0.02em;
+  }
+  footer .foot-brand {
+    font-family: 'Fraunces', serif; font-size: 16px;
+    color: var(--cream); letter-spacing: 0.01em;
+  }
+  footer a { color: var(--cream-soft); text-decoration: none; }
+  footer a:hover { color: var(--amber-hot); }
+
+  /* ---------- Also-serving strip ---------- */
+  .also-serving {
+    max-width: 1360px; margin: 0 auto;
+    padding: 56px clamp(24px, 5vw, 72px) 24px;
+    border-top: 1px solid rgba(26,20,16,0.1);
+  }
+  .also-serving .head {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -0.01em;
+    margin-bottom: 24px; max-width: 40ch;
+  }
+  .also-serving .head em { font-style: italic; color: var(--walnut); }
+  .city-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .city-chips a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px; border: 1px solid rgba(26,20,16,0.18);
+    border-radius: 999px; text-decoration: none; color: var(--ink);
+    font-size: 14px; letter-spacing: 0.01em; background: var(--cream);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .city-chips a:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .city-chips a .abbr {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55);
+  }
+  .city-chips a:hover .abbr { color: rgba(250,244,232,0.7); }
+
+  @media (max-width: 900px) {
+    .loc-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; }
+    .loc-hero .visual { aspect-ratio: 4 / 3; order: -1; }
+    .trust-strip .inner { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .why { grid-template-columns: 1fr; gap: 32px; padding: 72px 24px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .delivery { grid-template-columns: 1fr; padding: 72px 24px; }
+    .neighborhoods ul { grid-template-columns: 1fr; }
+    .cta-band .inner { grid-template-columns: 1fr; }
+  }
+  .logo-img { width: 44px !important; height: 44px !important; display: block; flex: none; color: initial; border-radius: 2px; }
+</style>
+  <link rel="icon" type="image/png" href="brand/favicon.png" />
+<!-- SEO:START -->
+<style id="mobile-fixes">
+footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+.menu-toggle, .mobile-menu { display: none; }
+@media (max-width: 900px) {
+  nav.primary { margin-left: auto; }
+  .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; flex: none; background: transparent; color: inherit;
+    border: 1px solid currentColor; border-radius: 999px; cursor: pointer; padding: 0; opacity: .9; }
+  .menu-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu:not([hidden]) { display: flex; position: fixed; inset: 0; z-index: 10000; background: #1a1410;
+    flex-direction: column; justify-content: center; align-items: center; padding: 80px 24px; }
+  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .mobile-menu nav a { font-family: 'Fraunces', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f4ede3;
+    text-decoration: none; letter-spacing: 0; text-transform: none; }
+  .mobile-menu nav a.current { color: #d49a5c; }
+  .mobile-menu nav a.current::after { display: none; }
+  .mobile-menu nav a.phone-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+    font-family: inherit; font-size: 17px; padding: 12px 22px; border: 1px solid rgba(244,237,227,.5); border-radius: 999px; }
+  .mobile-menu nav a.phone-link svg { width: 18px; height: 18px; }
+  .mobile-menu-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(244,237,227,.6); color: #f4ede3; cursor: pointer; }
+  .mobile-menu-close span { position: absolute; left: 12px; top: 21px; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu-close span:first-child { transform: rotate(45deg); }
+  .mobile-menu-close span:last-child { transform: rotate(-45deg); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+  .form-inner { grid-template-columns: minmax(0, 1fr) !important; }
+  .form-inner > * { min-width: 0; }
+}
+@media (max-width: 480px) {
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 44px; height: 44px;
+    display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0; }
+}
+</style>
+<script src="menu.js" defer></script>
+<link rel="canonical" href="https://www.dadowoodworking.com/albuquerque" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="dadowoodworking" />
+<meta property="og:title" content="Custom Hardwood Furniture in Albuquerque, NM — dadowoodworking" />
+<meta property="og:description" content="Handcrafted dining tables, cabinetry, and bookcases delivered free to Albuquerque, New Mexico. Custom hardwood furniture from dadowoodworking in Chamberino, NM." />
+<meta property="og:url" content="https://www.dadowoodworking.com/albuquerque" />
+<meta property="og:image" content="https://www.dadowoodworking.com/pieces/pecan-bookshelf-styled-dado-woodworking.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Custom Hardwood Furniture in Albuquerque, NM — dadowoodworking" />
+<meta name="twitter:description" content="Handcrafted dining tables, cabinetry, and bookcases delivered free to Albuquerque, New Mexico. Custom hardwood furniture from dadowoodworking in Chamberino, NM." />
+<meta name="twitter:image" content="https://www.dadowoodworking.com/pieces/pecan-bookshelf-styled-dado-woodworking.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["LocalBusiness", "FurnitureStore"], "@id": "https://www.dadowoodworking.com/#business", "name": "dadowoodworking", "alternateName": ["Dado Woodworking", "dadowoodworking.com"], "description": "Custom legacy-grade hardwood furniture, museum-quality picture framing, and custom architectural additions, handmade by Doug Lutz in Chamberino, New Mexico.", "url": "https://www.dadowoodworking.com/", "logo": "https://www.dadowoodworking.com/brand/dadowoodworking-logo.png", "image": "https://www.dadowoodworking.com/workshop-hero-dado-woodworking.jpg", "telephone": "+1-575-640-7463", "email": "dblutz@gmail.com", "founder": {"@type": "Person", "name": "Douglas Lutz"}, "address": {"@type": "PostalAddress", "streetAddress": "650 La Vina Road", "addressLocality": "Chamberino", "addressRegion": "NM", "postalCode": "88027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00", "description": "By appointment only"}], "areaServed": [{"@type": "City", "name": "Las Cruces, NM"}, {"@type": "City", "name": "El Paso, TX"}, {"@type": "City", "name": "Albuquerque, NM"}, {"@type": "City", "name": "Santa Fe, NM"}, {"@type": "City", "name": "Tucson, AZ"}, {"@type": "City", "name": "Phoenix, AZ"}, {"@type": "City", "name": "Midland–Odessa, TX"}, {"@type": "City", "name": "Dallas–Fort Worth, TX"}, {"@type": "City", "name": "Austin, TX"}, {"@type": "City", "name": "San Antonio, TX"}, {"@type": "City", "name": "Houston, TX"}], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom hardwood furniture"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom cabinetry and built-ins"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Museum-quality picture framing"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture repair and restoration"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom fireplace mantels and architectural additions"}}], "sameAs": ["https://www.angi.com/companylist/us/nm/anthony/dadowoodworkingcom-reviews-1.htm", "https://reviews.birdeye.com/dadowoodworkingcom-167599908273697"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dadowoodworking.com/"}, {"@type": "ListItem", "position": 2, "name": "Albuquerque", "item": "https://www.dadowoodworking.com/albuquerque"}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+
+  <div class="announce">
+    Now booking commissions — free delivery to Albuquerque homes.
+    <a href="commission.html">Start a conversation &rarr;</a>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="dadowoodworking home">
+      <img class="logo-mark logo-img" src="brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
+      <span>
+        <span class="logo-text">dadowoodworking</span>
+        <div class="logo-sub">Chamberino, NM</div>
+      </span>
+    </a>
+
+    <nav class="primary" aria-label="Primary">
+      <a href="gallery.html">Gallery</a>
+      <a href="commission.html">Commission</a>
+      
+      <a href="contact.html">Contact</a>
+      <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (575) 640-7463
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="loc-hero">
+    <div>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Albuquerque</span>
+      </div>
+      <div class="eyebrow">Serving Albuquerque, NM</div>
+      <h1>Custom hardwood furniture for<br /><em>Albuquerque homes</em>.</h1>
+      <p class="lede">From single dining tables to full library built-ins — hand-joined in walnut, white oak, mesquite, and pecan at my Chamberino workshop, then delivered to your Albuquerque home.</p>
+      <div class="cta-row">
+        <a href="commission.html" class="btn btn-primary">
+          Start a commission
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="gallery.html" class="btn btn-ghost">See the work</a>
+      </div>
+    </div>
+    <div class="visual">
+      <img src="pieces/pecan-bookshelf-styled-dado-woodworking.jpg" alt="Pecan bookshelf, styled — Carved sides, Southwestern setting" />
+      <div class="distance-chip">About 3.5 hours from my workshop</div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="inner">
+      <div class="item"><span class="num">1</span> maker, sketch to delivery</div>
+      <div class="item"><span class="num">Free</span> delivery to Albuquerque</div>
+      <div class="item"><span class="num">100%</span> made in New Mexico</div>
+      <div class="item"><span class="num">1-year</span> guarantee on all labor</div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <section class="why">
+    <div>
+      <h2>Why commission from a <em>Chamberino</em> maker?</h2>
+    </div>
+    <div class="why-list">
+      <div class="item"><h3>A New Mexico maker, not an import</h3><p>Albuquerque has plenty of furniture stores. Very few pieces on their floors were built in New Mexico by the person who signs them. Every commission I take is designed, milled, and joined by me.</p></div>
+      <div class="item"><h3>Southwestern work with real detail</h3><p>Carved pecan bookcases, New Mexico Revival consoles with custom ironwork — the pieces you can't find at a big-box store, made for the homes Albuquerque is known for.</p></div>
+      <div class="item"><h3>Free delivery to the metro</h3><p>Included on every Albuquerque commission. I schedule delivery when the piece is finished — no shipping company, no damage claims.</p></div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured">
+    <div class="inner">
+      <div class="top">
+        <h2>Selected work <em>from the workshop</em></h2>
+        <a class="see-all" href="gallery.html">See the full gallery &rarr;</a>
+      </div>
+      <div class="featured-grid">
+        <a class="piece" href="pieces_pages/pecan-bookshelf-styled.html">
+          <div class="frame"><img src="pieces/pecan-bookshelf-styled-dado-woodworking.jpg" alt="Pecan bookshelf, styled — Carved sides, Southwestern setting" loading="lazy" /></div>
+          <div class="meta-title">Pecan bookshelf, styled</div>
+          <div class="meta-sub">Carved sides, Southwestern setting</div>
+        </a>
+        <a class="piece" href="pieces_pages/ash-cherry-chest-of-drawers.html">
+          <div class="frame"><img src="pieces/ash-cherry-chest-of-drawers-dado-woodworking.jpg" alt="Ash and cherry chest of drawers — Matched grain, custom pulls" loading="lazy" /></div>
+          <div class="meta-title">Ash and cherry chest of drawers</div>
+          <div class="meta-sub">Matched grain, custom pulls</div>
+        </a>
+        <a class="piece" href="pieces_pages/entry-console-table.html">
+          <div class="frame"><img src="pieces/entry-console-table-dado-woodworking.jpg" alt="Entry console table — Red oak, live-edge drawer pull" loading="lazy" /></div>
+          <div class="meta-title">Entry console table</div>
+          <div class="meta-sub">Red oak, live-edge drawer pull</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY -->
+  <section class="delivery">
+    <div>
+      <h2>Free delivery, <em>every Albuquerque commission</em>.</h2>
+      <p>When a piece is finished, I load it, drive it, and place it in your home myself. No freight carriers, no crate to break down in your driveway, no damage claims to argue. It's part of the commission.</p>
+      <p style="margin-top:16px;">
+        Home visits for measurements can be arranged in the greater Albuquerque area — just ask.
+      </p>
+    </div>
+    <div class="neighborhoods">
+      <div class="label">Delivering throughout the Albuquerque area</div>
+      <ul>
+        <li>Nob Hill</li>
+        <li>North Valley</li>
+        <li>Los Ranchos</li>
+        <li>Corrales</li>
+        <li>Placitas</li>
+        <li>High Desert</li>
+        <li>Sandia Heights</li>
+        <li>Downtown</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <blockquote>
+      &ldquo;Douglas is a talented and experienced craftsman. … Doug was able to use our ideas and then created, constructed, stained and installed the piece where previously there had not been a mantel. Very pleased and thankful to Doug!&rdquo;
+      <cite>Mark Krohn · Verified Google review</cite>
+    </blockquote>
+  </section>
+
+  <!-- ALSO SERVING -->
+  <section class="also-serving">
+    <div class="head">Also serving <em>Southwest homes</em> across New Mexico, Texas, and Arizona.</div>
+    <div class="city-chips">
+      <a href="el-paso.html"><span>El Paso</span> <span class="abbr">TX</span></a>
+      <a href="las-cruces.html"><span>Las Cruces</span> <span class="abbr">NM</span></a>
+      <a href="dallas.html"><span>Dallas</span> <span class="abbr">TX</span></a>
+      <a href="santa-fe.html"><span>Santa Fe</span> <span class="abbr">NM</span></a>
+      <a href="houston.html"><span>Houston</span> <span class="abbr">TX</span></a>
+      <a href="san-antonio.html"><span>San Antonio</span> <span class="abbr">TX</span></a>
+      <a href="austin.html"><span>Austin</span> <span class="abbr">TX</span></a>
+      <a href="tucson.html"><span>Tucson</span> <span class="abbr">AZ</span></a>
+      <a href="phoenix.html"><span>Phoenix</span> <span class="abbr">AZ</span></a>
+      <a href="midland-odessa.html"><span>Midland–Odessa</span> <span class="abbr">TX</span></a>
+      <a href="locations.html"><span>See all service areas</span></a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="inner">
+      <div>
+        <h2>Ready to talk about a piece for <em>Albuquerque?</em></h2>
+        <p>
+          Call, email, or send a sketch. The first conversation is free.
+        </p>
+      </div>
+      <a href="tel:+15756407463" class="btn btn-primary">
+        Call (575) 640-7463
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="locations.html">Service areas</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
+
+</body>
+</html>
