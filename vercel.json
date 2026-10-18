@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/servicearea", "destination": "/locations", "permanent": true },
+    { "source": "/service-area", "destination": "/locations", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/brand/:file", "destination": "/:file" },
+    { "source": "/pieces/:file", "destination": "/:file" },
+    { "source": "/pieces_pages/:piece", "destination": "/:piece" }
+  ]
+}
