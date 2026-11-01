@@ -3,12 +3,119 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/servicearea", "destination": "/locations", "permanent": true },
-    { "source": "/service-area", "destination": "/locations", "permanent": true }
+    {
+      "source": "/servicearea",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-area",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/artist",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-furniture-gallery",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/custom-furniture-clone-1727530980120",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/store",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/inspiration",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/coffee-tables",
+      "destination": "/gallery#tables",
+      "permanent": true
+    },
+    {
+      "source": "/dining-tables",
+      "destination": "/gallery#tables",
+      "permanent": true
+    },
+    {
+      "source": "/design-process",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/process",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/framing",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/picture-framing",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/picture%20framing",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/framing.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/brand/:file", "destination": "/:file" },
-    { "source": "/pieces/:file", "destination": "/:file" },
-    { "source": "/pieces_pages/:piece", "destination": "/:piece" }
+    {
+      "source": "/brand/:file",
+      "destination": "/:file"
+    },
+    {
+      "source": "/pieces/:file",
+      "destination": "/:file"
+    },
+    {
+      "source": "/pieces_pages/:piece",
+      "destination": "/:piece"
+    }
   ]
 }
