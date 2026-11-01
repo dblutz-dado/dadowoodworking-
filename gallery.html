@@ -74,6 +74,7 @@
   .card.span-4 { grid-column: span 4; }
   .card.span-6 { grid-column: span 6; }
   .card.span-8 { grid-column: span 8; }
+  .card.span-12 { grid-column: span 12; }
 
   .frame {
     position: relative; overflow: hidden;
@@ -106,6 +107,13 @@
     margin-top: 4px; font-size: 13px;
     color: rgba(26, 20, 16, 0.6); letter-spacing: 0.02em;
   }
+
+  .view-link {
+    display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--walnut, #6b3f22);
+    border-bottom: 1px solid currentColor; padding-bottom: 2px;
+  }
+  .card:hover .view-link, .card:focus-visible .view-link { opacity: 0.75; }
 
   .cta-band {
     background: var(--ink); color: var(--cream);
@@ -212,12 +220,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
 <body>
 
   <div class="announce">
-    Now booking commissions — delivery available nationwide.
-    <a href="commission.html">Start a conversation &rarr;</a>
+    Now booking commissions — free delivery across New Mexico, Texas, and Arizona.
+    <a href="/commission">Start a conversation &rarr;</a>
   </div>
 
   <header class="site-header">
-    <a href="index.html" class="logo" aria-label="dadowoodworking home">
+    <a href="/" class="logo" aria-label="dadowoodworking home">
       <img class="logo-mark logo-img" src="brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
       <span>
         <span class="logo-text">dadowoodworking</span>
@@ -226,12 +234,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
     </a>
 
     <nav class="primary" aria-label="Primary">
-      <a href="gallery.html" class="current">Gallery</a>
-      <a href="commission.html">Commission</a>
-      <a href="contact.html">Contact</a>
+      <a href="/gallery" class="current">Gallery</a>
+      <a href="/commission">Commission</a>
+      <a href="/contact">Contact</a>
       <!-- old-links-removed -->
       <span style="display:none;">
-      <a href="gallery.html" class="current" aria-current="page">Gallery</a>
+      <a href="/gallery" class="current" aria-current="page">Gallery</a>
       </span>
       <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -244,7 +252,7 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
 
   <section class="page-hero">
     <div class="breadcrumb">
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <span class="sep">/</span>
       <span class="current">Gallery</span>
     </div>
@@ -264,12 +272,72 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
       <a class="chip" href="#desks" data-filter="desks">Desks</a>
       <a class="chip" href="#bookcases" data-filter="bookcases">Bookcases</a>
       <a class="chip" href="#seating" data-filter="seating">Seating</a>
+      <a class="chip" href="#architectural" data-filter="architectural">Doors &amp; mantels</a>
     </div>
-    <div class="count" id="gallery-count">21 pieces</div>
+    <div class="count" id="gallery-count">25 pieces</div>
   </nav>
 
   <main class="grid" aria-label="Gallery of work">
-    <a data-cat="cabinets" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/custom-built-in-cabinetry.html">
+    <a data-cat="architectural" class="card span-12" style="--ratio: 2000 / 544;" href="pieces/pecan-fireplace-mantel-before-after-dado-woodworking.jpg">
+      <div class="frame">
+        
+        <img src="pieces/pecan-fireplace-mantel-before-after-dado-woodworking.jpg" alt="Before and after of a fireplace: a plain green stucco surround replaced with a custom pecan mantel and surround with a thick slab shelf" loading="lazy" />
+      </div>
+      <div class="meta">
+        <div>
+          <div class="meta-title">Pecan fireplace mantel, before and after</div>
+          <div class="meta-sub">Stucco surround replaced with a custom pecan mantel</div>
+          <span class="view-link" aria-hidden="true">View photo →</span>
+        </div>
+      </div>
+    </a>
+
+    <a data-cat="architectural" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/custom-doors-and-gates">
+      <div class="frame">
+        <span class="badge">Doors &amp; mantels</span>
+        <img src="pieces/custom-pivot-entry-door-dado-woodworking.jpg" alt="Custom flat-panel hardwood pivot entry door with a long black pull" loading="lazy" />
+      </div>
+      <div class="meta">
+        <div>
+          <div class="meta-title">Custom doors and gates</div>
+          <div class="meta-sub">Entry doors, barn doors, and courtyard gates</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
+        </div>
+      </div>
+    </a>
+
+
+
+    <a data-cat="architectural" class="card span-8" style="--ratio: 3 / 2;" href="pieces/floating-stair-treads-dado-woodworking.jpg">
+      <div class="frame">
+        <span class="badge">Doors &amp; mantels</span>
+        <img src="pieces/floating-stair-treads-dado-woodworking.jpg" alt="Floating solid wood stair treads with a steel cable railing beside a glass entry" loading="lazy" />
+      </div>
+      <div class="meta">
+        <div>
+          <div class="meta-title">Floating stair treads</div>
+          <div class="meta-sub">Solid wood treads with a cable rail</div>
+          <span class="view-link" aria-hidden="true">View photo →</span>
+        </div>
+      </div>
+    </a>
+
+
+    <a data-cat="architectural" class="card span-8" style="--ratio: 3 / 2;" href="pieces/open-riser-stair-treads-dado-woodworking.jpg">
+      <div class="frame">
+        <span class="badge">Doors &amp; mantels</span>
+        <img src="pieces/open-riser-stair-treads-dado-woodworking.jpg" alt="Open-riser wood stair treads on a steel stringer next to a kitchen bar" loading="lazy" />
+      </div>
+      <div class="meta">
+        <div>
+          <div class="meta-title">Open-riser stair treads</div>
+          <div class="meta-sub">Wood treads on a steel stringer</div>
+          <span class="view-link" aria-hidden="true">View photo →</span>
+        </div>
+      </div>
+    </a>
+
+    <a data-cat="cabinets" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/custom-built-in-cabinetry">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/custom-built-in-cabinetry-dado-woodworking.jpg" alt="Custom built-in cabinetry — Adjustable shelves, drawers for storage" loading="lazy" />
@@ -278,11 +346,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Custom built-in cabinetry</div>
           <div class="meta-sub">Adjustable shelves, drawers for storage</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="cabinets" class="card span-8" style="--ratio: 3 / 2;" href="pieces_pages/cypress-corner-cabinets.html">
+    <a data-cat="cabinets" class="card span-8" style="--ratio: 3 / 2;" href="/pieces_pages/cypress-corner-cabinets">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/cypress-corner-cabinets-dado-woodworking.jpg" alt="Cypress corner cabinets with black walnut, a set of three with glass doors" loading="lazy" />
@@ -291,11 +360,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Cypress corner cabinets</div>
           <div class="meta-sub">Black walnut offset with cypress</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="cabinets" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/cherry-console-stereo-cabinet.html">
+    <a data-cat="cabinets" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/cherry-console-stereo-cabinet">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/cherry-console-stereo-cabinet-dado-woodworking.jpg" alt="Cherry console stereo cabinet — Solid cherry · mid-century modern" loading="lazy" />
@@ -304,11 +374,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Cherry console stereo cabinet</div>
           <div class="meta-sub">Solid cherry · mid-century modern</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="consoles" class="card span-4" style="--ratio: 1 / 1;" href="pieces_pages/new-orleans-console-table.html">
+    <a data-cat="consoles" class="card span-4" style="--ratio: 1 / 1;" href="/pieces_pages/new-orleans-console-table">
       <div class="frame">
         <span class="badge">Consoles</span>
         <img src="pieces/new-orleans-console-table-dado-woodworking.jpg" alt="New Orleans console table — Ash and cherry" loading="lazy" />
@@ -317,11 +388,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">New Orleans console table</div>
           <div class="meta-sub">Ash and cherry</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="desks" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/custom-ash-writing-desk.html">
+    <a data-cat="desks" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/custom-ash-writing-desk">
       <div class="frame">
         <span class="badge">Desks</span>
         <img src="pieces/custom-ash-writing-desk-dado-woodworking.jpg" alt="Custom ash writing desk — Solid ash · resolved corner construction" loading="lazy" />
@@ -330,11 +402,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Custom ash writing desk</div>
           <div class="meta-sub">Solid ash · resolved corner construction</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/oak-cypress-coffee-table.html">
+    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/oak-cypress-coffee-table">
       <div class="frame">
         <span class="badge">Tables</span>
         <img src="pieces/oak-cypress-coffee-table-dado-woodworking.jpg" alt="Modern oak and cypress coffee table with stepped top and surround drawers" loading="lazy" />
@@ -343,11 +416,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Oak and cypress coffee table</div>
           <div class="meta-sub">Stepped top · surround drawers</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/stahman-farms-coffee-table.html">
+    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/stahman-farms-coffee-table">
       <div class="frame">
         <span class="badge">Tables</span>
         <img src="pieces/stahman-farms-coffee-table-dado-woodworking.jpg" alt="Stahman Farms coffee table — Pecan · softened oval profile" loading="lazy" />
@@ -356,11 +430,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Stahman Farms coffee table</div>
           <div class="meta-sub">Pecan · softened oval profile</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="cabinets" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/red-grandis-liquor-cabinet.html">
+    <a data-cat="cabinets" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/red-grandis-liquor-cabinet">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/red-grandis-liquor-cabinet-dado-woodworking.jpg" alt="Red Grandis liquor cabinet — Handcrafted for organized storage" loading="lazy" />
@@ -369,11 +444,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Red Grandis liquor cabinet</div>
           <div class="meta-sub">Handcrafted for organized storage</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="seating" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/butlers-chair.html">
+    <a data-cat="seating" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/butlers-chair">
       <div class="frame">
         <span class="badge">Seating</span>
         <img src="pieces/butlers-chair-dado-woodworking.jpg" alt="Butler’s chair — Mahogany and Red Grandis" loading="lazy" />
@@ -382,11 +458,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Butler’s chair</div>
           <div class="meta-sub">Mahogany and Red Grandis</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="cabinets" class="card span-8" style="--ratio: 3 / 2;" href="pieces_pages/ash-cherry-chest-of-drawers.html">
+    <a data-cat="cabinets" class="card span-8" style="--ratio: 3 / 2;" href="/pieces_pages/ash-cherry-chest-of-drawers">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/ash-cherry-chest-of-drawers-dado-woodworking.jpg" alt="Ash and cherry chest of drawers — Matched grain · custom pulls" loading="lazy" />
@@ -395,11 +472,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Ash and cherry chest of drawers</div>
           <div class="meta-sub">Matched grain · custom pulls</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="cabinets" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/alder-buffet-credenza.html">
+    <a data-cat="cabinets" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/alder-buffet-credenza">
       <div class="frame">
         <span class="badge">Cabinets</span>
         <img src="pieces/alder-buffet-credenza-dado-woodworking.jpg" alt="Alder buffet credenza — Solid alder · dining-room storage" loading="lazy" />
@@ -408,11 +486,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Alder buffet credenza</div>
           <div class="meta-sub">Solid alder · dining-room storage</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="consoles" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/new-mexico-revival-console.html">
+    <a data-cat="consoles" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/new-mexico-revival-console">
       <div class="frame">
         <span class="badge">Consoles</span>
         <img src="pieces/new-mexico-revival-console-dado-woodworking.jpg" alt="New Mexico Revival console — Red oak · custom iron work" loading="lazy" />
@@ -421,11 +500,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">New Mexico Revival console</div>
           <div class="meta-sub">Red oak · custom iron work</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="consoles" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/entry-console-table.html">
+    <a data-cat="consoles" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/entry-console-table">
       <div class="frame">
         <span class="badge">Consoles</span>
         <img src="pieces/entry-console-table-dado-woodworking.jpg" alt="Entry console table — Red oak · live-edge drawer pull" loading="lazy" />
@@ -434,11 +514,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Entry console table</div>
           <div class="meta-sub">Red oak · live-edge drawer pull</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/red-grandis-mid-century-coffee-table.html">
+    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/red-grandis-mid-century-coffee-table">
       <div class="frame">
         <span class="badge">Tables</span>
         <img src="pieces/red-grandis-mid-century-coffee-table-dado-woodworking.jpg" alt="Red Grandis mid-century modern coffee table with matching-grain drawer" loading="lazy" />
@@ -447,11 +528,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Red Grandis mid-century coffee table</div>
           <div class="meta-sub">Matching-grain drawer</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/flame-mahogany-table.html">
+    <a data-cat="tables" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/flame-mahogany-table">
       <div class="frame">
         <span class="badge">Tables</span>
         <img src="pieces/flame-mahogany-table-dado-woodworking.jpg" alt="Flame mahogany table top in a dining room" loading="lazy" />
@@ -460,11 +542,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Flame mahogany table</div>
           <div class="meta-sub">Flame mahogany top</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="tables" class="card span-8" style="--ratio: 3 / 2;" href="pieces_pages/two-board-mahogany-dining-table.html">
+    <a data-cat="tables" class="card span-8" style="--ratio: 3 / 2;" href="/pieces_pages/two-board-mahogany-dining-table">
       <div class="frame">
         <span class="badge">Tables</span>
         <img src="pieces/two-board-mahogany-dining-table-dado-woodworking.jpg" alt="Two-board mahogany dining table — Modern farmhouse design" loading="lazy" />
@@ -473,11 +556,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Two-board mahogany dining table</div>
           <div class="meta-sub">Modern farmhouse design</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/stepped-library-bookcases.html">
+    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/stepped-library-bookcases">
       <div class="frame">
         <span class="badge">Bookcases</span>
         <img src="pieces/stepped-library-bookcases-dado-woodworking.jpg" alt="Painted poplar stepped library bookcases filling a living room wall in a Las Cruces home" loading="lazy" />
@@ -486,11 +570,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Stepped library bookcases</div>
           <div class="meta-sub">Painted poplar · Las Cruces</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/carved-pecan-bookshelf.html">
+    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/carved-pecan-bookshelf">
       <div class="frame">
         <span class="badge">Bookcases</span>
         <img src="pieces/carved-pecan-bookshelf-dado-woodworking.jpg" alt="Carved pecan bookshelf — Traditional Southwestern detail" loading="lazy" />
@@ -499,11 +584,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Carved pecan bookshelf</div>
           <div class="meta-sub">Traditional Southwestern detail</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="bookcases" class="card span-6" style="--ratio: 3 / 2;" href="pieces_pages/pecan-bookshelf-styled.html">
+    <a data-cat="bookcases" class="card span-6" style="--ratio: 3 / 2;" href="/pieces_pages/pecan-bookshelf-styled">
       <div class="frame">
         <span class="badge">Bookcases</span>
         <img src="pieces/pecan-bookshelf-styled-dado-woodworking.jpg" alt="Pecan bookshelf, styled — Carved sides · Southwestern setting" loading="lazy" />
@@ -512,11 +598,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Pecan bookshelf, styled</div>
           <div class="meta-sub">Carved sides · Southwestern setting</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/southwestern-pecan-bookcase.html">
+    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/southwestern-pecan-bookcase">
       <div class="frame">
         <span class="badge">Bookcases</span>
         <img src="pieces/southwestern-pecan-bookcase-dado-woodworking.jpg" alt="Southwestern pecan bookcase — Fully stocked, traditional style" loading="lazy" />
@@ -525,11 +612,12 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Southwestern pecan bookcase</div>
           <div class="meta-sub">Fully stocked, traditional style</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
 
-    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="pieces_pages/pecan-bookcase-stocked.html">
+    <a data-cat="bookcases" class="card span-4" style="--ratio: 3 / 4;" href="/pieces_pages/pecan-bookcase-stocked">
       <div class="frame">
         <span class="badge">Bookcases</span>
         <img src="pieces/pecan-bookcase-stocked-dado-woodworking.jpg" alt="Southwestern pecan bookcase — Traditional New Mexico style, detail view" loading="lazy" />
@@ -538,6 +626,7 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <div>
           <div class="meta-title">Pecan bookcase, fully stocked</div>
           <div class="meta-sub">Traditional New Mexico style, detail view</div>
+          <span class="view-link" aria-hidden="true">View piece →</span>
         </div>
       </div>
     </a>
@@ -552,7 +641,7 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
           I take on a small number of projects each year, so early bookings are best.
         </p>
       </div>
-      <a href="commission.html" class="btn btn-primary">
+      <a href="/commission" class="btn btn-primary">
         Start a commission
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -566,7 +655,7 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
     <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
     <div>650 La Vina Road, Chamberino, NM 88027</div>
     <div><a href="tel:+15756407463">(575) 640-7463</a></div>
-    <div><a href="locations.html">Service areas</a></div>
+    <div><a href="/locations">Service areas</a></div>
     <div>© 2026 · Handcrafted in New Mexico</div>
   </footer>
 

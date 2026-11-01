@@ -24,9 +24,9 @@
     panel.appendChild(close);
     var list = document.createElement('nav');
     list.setAttribute('aria-label', 'Mobile');
-    var home = document.querySelector('a.logo, header a[href$="index.html"]');
-    var homeHref = home ? home.getAttribute('href') : 'index.html';
-    if (homeHref === '#') homeHref = 'index.html';
+    var home = document.querySelector('a.logo, header a[href="/"]');
+    var homeHref = home ? home.getAttribute('href') : '/';
+    if (homeHref === '#') homeHref = '/';
     var h = document.createElement('a'); h.href = homeHref; h.textContent = 'Home'; list.appendChild(h);
     Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
       var c = a.cloneNode(true);
