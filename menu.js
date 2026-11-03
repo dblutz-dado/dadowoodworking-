@@ -31,6 +31,9 @@
     Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
       var c = a.cloneNode(true);
       c.removeAttribute('style');
+      c.classList.remove('current');
+      c.removeAttribute('aria-current');
+      if (!c.classList.contains('phone-link')) { c.style.color = '#f4ede3'; c.style.textAlign = 'center'; }
       list.appendChild(c);
     });
     panel.appendChild(list);
