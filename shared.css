@@ -220,3 +220,7 @@ footer.site-footer a:hover { color: var(--amber-hot); }
 .crumbs a:hover { color: var(--walnut); }
 .crumbs .sep { color: rgba(26,20,16,0.3); }
 .crumbs .current { color: var(--ink); }
+
+/* Keep menu labels on one line; tighten spacing on mid-size screens */
+nav.primary a { white-space: nowrap; }
+@media (max-width: 1180px) and (min-width: 901px) { nav.primary { gap: 20px; } }
