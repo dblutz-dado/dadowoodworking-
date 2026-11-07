@@ -79,18 +79,13 @@
       "permanent": true
     },
     {
-      "source": "/framing",
-      "destination": "/commission",
-      "permanent": true
-    },
-    {
       "source": "/picture-framing",
-      "destination": "/commission",
+      "destination": "/framing",
       "permanent": true
     },
     {
       "source": "/picture%20framing",
-      "destination": "/commission",
+      "destination": "/framing",
       "permanent": true
     },
     {
