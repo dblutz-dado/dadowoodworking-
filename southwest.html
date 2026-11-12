@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Custom Furniture for the Southwest | Dado Woodworking</title>
+<meta name="description" content="Handmade hardwood furniture from Chamberino, NM, delivered free across New Mexico, Texas, and Arizona. Dining tables, bookcases, cabinetry, and built-ins." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared.css" />
+<style>
+  .loc-index-hero {
+    max-width: 1360px; margin: 0 auto;
+    padding: clamp(56px, 9vh, 96px) clamp(24px, 5vw, 72px) 48px;
+  }
+  .loc-index-hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500; margin-bottom: 20px;
+  }
+  .loc-index-hero .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--walnut); }
+  .loc-index-hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(40px, 5.4vw, 72px); line-height: 1.05; letter-spacing: -0.02em;
+    max-width: 22ch;
+  }
+  .loc-index-hero h1 em { font-style: italic; color: var(--walnut); }
+  .loc-index-hero p.lede {
+    margin-top: 20px; max-width: 62ch;
+    font-size: clamp(16px, 1.15vw, 18px); line-height: 1.65;
+    color: rgba(26,20,16,0.78);
+  }
+
+  .region-block {
+    max-width: 1360px; margin: 0 auto;
+    padding: 32px clamp(24px, 5vw, 72px);
+  }
+  .region-label {
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55); margin-bottom: 20px;
+    padding-top: 24px; border-top: 1px solid rgba(26,20,16,0.12);
+  }
+  .city-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .city-card {
+    background: var(--cream); border: 1px solid rgba(26,20,16,0.1);
+    border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .city-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(15,8,4,0.10);
+    border-color: rgba(26,20,16,0.2);
+  }
+  .city-card .img {
+    aspect-ratio: 4 / 3; background: var(--cream-warm); overflow: hidden;
+  }
+  .city-card .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .city-card .body { padding: 20px 22px 24px; }
+  .city-card h3 {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 26px; letter-spacing: -0.01em; margin-bottom: 4px;
+  }
+  .city-card .sub {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(26,20,16,0.55); margin-bottom: 12px;
+  }
+  .city-card p {
+    font-size: 14.5px; line-height: 1.55; color: rgba(26,20,16,0.78);
+    margin-bottom: 16px;
+  }
+  .city-card .go {
+    font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--walnut); font-weight: 500;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+
+  .sw-actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .sw-link { color: var(--walnut); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; text-decoration: none; }
+  .sw-section { max-width: 1360px; margin: 0 auto; padding: 32px clamp(24px, 5vw, 72px); }
+  .sw-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .sw-grid-2 { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .sw-point, .sw-region { padding-top: 24px; border-top: 1px solid rgba(26,20,16,0.12); }
+  .sw-point h2, .sw-region h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 24px; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .sw-point p, .sw-grid-2 p, .sw-faq p { font-size: 15.5px; line-height: 1.65; color: rgba(26,20,16,0.78); }
+  .sw-grid-2 p + p { margin-top: 16px; }
+  .sw-region ul { list-style: none; padding: 0; margin: 0; }
+  .sw-region li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(26,20,16,0.08); font-size: 15.5px; }
+  .sw-region li a { color: var(--walnut); text-decoration: none; font-weight: 500; }
+  .sw-region li span { color: rgba(26,20,16,0.55); font-size: 13.5px; }
+  .sw-note { margin-top: 14px; font-size: 13.5px; line-height: 1.55; color: rgba(26,20,16,0.6); }
+  .sw-h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.01em; margin-bottom: 16px; }
+  .sw-links a { color: var(--walnut); font-weight: 500; text-decoration: none; margin-right: 24px; display: inline-block; }
+  .sw-quote { margin: 0; padding: 28px 32px; background: var(--cream); border-left: 3px solid var(--walnut); border-radius: 4px; }
+  .sw-quote p { font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55; color: #1a1410; }
+  .sw-quote cite { display: block; margin-top: 14px; font-style: normal; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26,20,16,0.6); }
+  .sw-faq { max-width: 860px; }
+  .sw-faq details { border-bottom: 1px solid rgba(26,20,16,0.12); padding: 18px 0; }
+  .sw-faq summary { cursor: pointer; font-family: 'Fraunces', serif; font-size: 20px; }
+  .sw-faq details p { margin-top: 12px; }
+  @media (max-width: 900px) { .sw-grid-3, .sw-grid-2 { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) {
+    .city-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- SEO:START -->
+<style id="mobile-fixes">
+footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+.menu-toggle, .mobile-menu { display: none; }
+@media (max-width: 900px) {
+  nav.primary { margin-left: auto; }
+  .menu-toggle { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px; margin-left: 10px; flex: none; background: transparent; color: inherit;
+    border: 1px solid currentColor; border-radius: 999px; cursor: pointer; padding: 0; opacity: .9; }
+  .menu-toggle span { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu:not([hidden]) { display: flex; position: fixed; inset: 0; z-index: 10000; background: #1a1410;
+    flex-direction: column; justify-content: center; align-items: center; padding: 80px 24px; }
+  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .mobile-menu nav a { font-family: 'Fraunces', Georgia, serif; font-size: 30px; line-height: 1.1; color: #f4ede3;
+    text-decoration: none; letter-spacing: 0; text-transform: none; }
+  .mobile-menu nav a.current { color: #d49a5c; }
+  .mobile-menu nav a.current::after { display: none; }
+  .mobile-menu nav a.phone-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+    font-family: inherit; font-size: 17px; padding: 12px 22px; border: 1px solid rgba(244,237,227,.5); border-radius: 999px; }
+  .mobile-menu nav a.phone-link svg { width: 18px; height: 18px; }
+  .mobile-menu-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(244,237,227,.6); color: #f4ede3; cursor: pointer; }
+  .mobile-menu-close span { position: absolute; left: 12px; top: 21px; width: 18px; height: 1.5px; background: currentColor; }
+  .mobile-menu-close span:first-child { transform: rotate(45deg); }
+  .mobile-menu-close span:last-child { transform: rotate(-45deg); }
+  html.menu-open, html.menu-open body { overflow: hidden; }
+  .form-inner { grid-template-columns: minmax(0, 1fr) !important; }
+  .form-inner > * { min-width: 0; }
+}
+@media (max-width: 480px) {
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 44px; height: 44px;
+    display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0; }
+}
+</style>
+<script src="menu.js" defer></script>
+<link rel="canonical" href="https://www.dadowoodworking.com/southwest" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="dadowoodworking" />
+<meta property="og:title" content="Custom Furniture for the Southwest | Dado Woodworking" />
+<meta property="og:description" content="Handmade hardwood furniture from Chamberino, NM, delivered free across New Mexico, Texas, and Arizona. Dining tables, bookcases, cabinetry, and built-ins." />
+<meta property="og:url" content="https://www.dadowoodworking.com/southwest" />
+<meta property="og:image" content="https://www.dadowoodworking.com/pieces/new-mexico-revival-console-dado-woodworking.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Custom Furniture for the Southwest | Dado Woodworking" />
+<meta name="twitter:description" content="Handmade hardwood furniture from Chamberino, NM, delivered free across New Mexico, Texas, and Arizona. Dining tables, bookcases, cabinetry, and built-ins." />
+<meta name="twitter:image" content="https://www.dadowoodworking.com/pieces/new-mexico-revival-console-dado-woodworking.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["LocalBusiness", "FurnitureStore"], "@id": "https://www.dadowoodworking.com/#business", "name": "dadowoodworking", "alternateName": ["Dado Woodworking", "dadowoodworking.com"], "description": "Custom legacy-grade hardwood furniture, museum-quality picture framing, and custom architectural additions, handmade by Doug Lutz in Chamberino, New Mexico.", "url": "https://www.dadowoodworking.com/", "logo": "https://www.dadowoodworking.com/brand/dadowoodworking-logo.png", "image": "https://www.dadowoodworking.com/workshop-hero-dado-woodworking.jpg", "telephone": "+1-575-640-7463", "email": "dblutz@gmail.com", "founder": {"@type": "Person", "name": "Douglas Lutz"}, "address": {"@type": "PostalAddress", "streetAddress": "650 La Vina Road", "addressLocality": "Chamberino", "addressRegion": "NM", "postalCode": "88027", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00", "description": "By appointment only"}], "areaServed": [{"@type": "City", "name": "Las Cruces, NM"}, {"@type": "City", "name": "El Paso, TX"}, {"@type": "City", "name": "Albuquerque, NM"}, {"@type": "City", "name": "Santa Fe, NM"}, {"@type": "City", "name": "Tucson, AZ"}, {"@type": "City", "name": "Phoenix, AZ"}, {"@type": "City", "name": "Midland–Odessa, TX"}, {"@type": "City", "name": "Dallas–Fort Worth, TX"}, {"@type": "City", "name": "Austin, TX"}, {"@type": "City", "name": "San Antonio, TX"}, {"@type": "City", "name": "Houston, TX"}], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom hardwood furniture"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom cabinetry and built-ins"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Museum-quality picture framing"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture repair and restoration"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom fireplace mantels and architectural additions"}}], "sameAs": ["https://www.angi.com/companylist/us/nm/anthony/dadowoodworkingcom-reviews-1.htm", "https://reviews.birdeye.com/dadowoodworkingcom-167599908273697"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dadowoodworking.com/"}, {"@type": "ListItem", "position": 2, "name": "Service areas", "item": "https://www.dadowoodworking.com/locations"}, {"@type": "ListItem", "position": 3, "name": "The Southwest", "item": "https://www.dadowoodworking.com/southwest"}]}</script>
+<!-- SEO:END -->
+<style id="nav-fit">
+@media (max-width: 1100px) and (min-width: 901px) {
+  nav.primary { gap: 18px !important; }
+  nav.primary a { font-size: 13.5px !important; }
+  nav.primary a.phone-link { font-size: 0 !important; padding: 0 !important; width: 42px; height: 42px; display: inline-flex !important; align-items: center; justify-content: center; }
+  nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0 !important; }
+}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo" aria-label="dadowoodworking home">
+      <img class="logo-mark logo-img" src="brand/dadowoodworking-logo.png" width="44" height="44" alt="" aria-hidden="true" />
+      <span>
+        <span class="logo-text">dadowoodworking</span>
+        <div class="logo-sub">Chamberino, NM</div>
+      </span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gallery">Gallery</a>
+      <a href="/commission">Commission</a>
+      
+      <a href="/restoration">Repair &amp; Restoration</a>
+      
+      <a href="/framing">Framing</a>
+      <a href="/contact">Contact</a>
+      <a class="phone-link" href="tel:+15756407463" aria-label="Call (575) 640-7463">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        (575) 640-7463
+      </a>
+    </nav>
+  </header>
+
+  <section class="loc-index-hero">
+    <nav class="crumbs breadcrumb-trail" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/locations">Service areas</a><span class="sep">/</span><span class="current" aria-current="page">The Southwest</span></nav>
+    <div class="eyebrow">New Mexico · Texas · Arizona</div>
+    <h1>Custom hardwood furniture <em>for the Southwest.</em></h1>
+    <p class="lede">I build every piece by hand in my workshop in Chamberino, New Mexico, in the Mesilla Valley, and I drive it to your home myself. Delivery is free across New Mexico, Texas, and Arizona. Dining tables, bookcases, cabinetry, consoles, and built-ins, designed with you for the room they're going into.</p>
+    <div class="sw-actions"><a href="/commission" class="btn btn-primary">Start a commission</a><a href="/gallery" class="sw-link">See the full gallery →</a></div>
+  </section>
+
+  <section class="sw-section">
+    <div class="sw-grid-3">
+      <div class="sw-point">
+        <h2>Built in the desert, for the desert</h2>
+        <p>Every board is milled, dried, and finished in the dry Chihuahuan Desert air of the Mesilla Valley, so wood that's stable in Chamberino stays stable in dry Southwest homes.</p>
+      </div>
+      <div class="sw-point">
+        <h2>One maker, sketch to delivery</h2>
+        <p>No showroom, factory, or middlemen. We talk about the room, I sketch, you get a written quote with a price and a realistic schedule, and I build the piece myself. Every piece comes with a one-year guarantee on all labor.</p>
+      </div>
+      <div class="sw-point">
+        <h2>Delivered by the person who built it</h2>
+        <p>When a piece is finished, I load it into my truck and drive it to you. No freight carriers, no crate to break down in your driveway, and no damage claims to argue. Delivery is also available elsewhere in the U.S.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sw-section">
+    <div class="region-label">Southwestern work from the workshop</div>
+    <div class="city-grid">
+      <a class="city-card" href="/pieces_pages/new-mexico-revival-console">
+        <div class="img"><img src="pieces/new-mexico-revival-console-dado-woodworking.jpg" alt="Red oak New Mexico Revival console with custom ironwork, handmade by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>New Mexico Revival Console</h3><div class="sub">Red oak · Custom ironwork</div><p>A red oak console inspired by New Mexico Revival architecture, finished with custom ironwork.</p><span class="go">See the piece →</span></div>
+      </a>
+      <a class="city-card" href="/pieces_pages/stahman-farms-coffee-table">
+        <div class="img"><img src="pieces/stahman-farms-coffee-table-dado-woodworking.jpg" alt="Pecan coffee table with a parquet top and hand-carved legs, made for Stahman Farms by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>Stahman Farms Coffee Table</h3><div class="sub">Solid pecan · Mesilla Valley</div><p>Made for Stahman Farms in the Mesilla Valley, with a parquet pecan top, a softened oval profile, and hand-carved legs.</p><span class="go">See the piece →</span></div>
+      </a>
+      <a class="city-card" href="/pieces_pages/southwestern-pecan-bookcase">
+        <div class="img"><img src="pieces/southwestern-pecan-bookcase-dado-woodworking.jpg" alt="Pecan bookcase in traditional New Mexico Southwestern style, handmade by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>Southwestern Pecan Bookcase</h3><div class="sub">Solid pecan · Carved sides</div><p>A pecan bookcase in a traditional Southwestern New Mexico style.</p><span class="go">See the piece →</span></div>
+      </a>
+      <a class="city-card" href="/pieces_pages/carved-pecan-bookshelf">
+        <div class="img"><img src="pieces/carved-pecan-bookshelf-dado-woodworking.jpg" alt="Solid pecan bookshelf with three shelves and carved Southwestern side details, by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>Carved Pecan Bookshelf</h3><div class="sub">Solid pecan · Three shelves</div><p>Three shelves with carved side details in a traditional Southwestern New Mexico style.</p><span class="go">See the piece →</span></div>
+      </a>
+      <a class="city-card" href="/pieces_pages/entry-console-table">
+        <div class="img"><img src="pieces/entry-console-table-dado-woodworking.jpg" alt="Red oak entry console table with a live-edge drawer pull and bowtie inlays, handmade by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>Entry Console Table</h3><div class="sub">Red oak · 2025 Texas Furniture Makers Show</div><p>Red oak with a live-edge drawer pull and contrasting bowtie inlays. My accepted entry in the 2025 Texas Furniture Makers Show.</p><span class="go">See the piece →</span></div>
+      </a>
+      <a class="city-card" href="/pieces_pages/stepped-library-bookcases">
+        <div class="img"><img src="pieces/stepped-library-bookcases-dado-woodworking.jpg" alt="Painted poplar stepped library bookcases built for a Las Cruces home by dadowoodworking" loading="lazy" /></div>
+        <div class="body"><h3>Stepped Library Bookcases</h3><div class="sub">Painted poplar · Las Cruces, NM</div><p>A run of library bookcases for a Las Cruces home, stepping up the wall from low shelves to full-height cases in the corner.</p><span class="go">See the piece →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="sw-section">
+    <div class="region-label">Where I deliver</div>
+    <div class="sw-grid-3">
+      <div class="sw-region">
+        <h2>New Mexico</h2>
+        <ul>
+          <li><a href="/las-cruces">Las Cruces</a> <span>About 25 minutes</span></li>
+          <li><a href="/albuquerque">Albuquerque</a> <span>About 3.5 hours</span></li>
+          <li><a href="/santa-fe">Santa Fe</a> <span>About 4.5 hours</span></li>
+        </ul>
+      </div>
+      <div class="sw-region">
+        <h2>Texas</h2>
+        <ul>
+          <li><a href="/el-paso">El Paso</a> <span>About 45 minutes</span></li>
+          <li><a href="/midland-odessa">Midland–Odessa</a> <span>About 5 hours</span></li>
+          <li><a href="/san-antonio">San Antonio</a> <span>About 8.5 hours</span></li>
+          <li><a href="/austin">Austin</a> <span>About 9 hours</span></li>
+          <li><a href="/dallas">Dallas–Fort Worth</a> <span>About 10 hours</span></li>
+          <li><a href="/houston">Houston</a> <span>About 11.5 hours</span></li>
+        </ul>
+      </div>
+      <div class="sw-region">
+        <h2>Arizona</h2>
+        <ul>
+          <li><a href="/tucson">Tucson</a> <span>About 4.5 hours</span></li>
+          <li><a href="/phoenix">Phoenix</a> <span>About 6 hours</span></li>
+        </ul>
+        <p class="sw-note">Drive times are from my Chamberino workshop. If you're somewhere else in the Southwest, call and ask.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sw-section">
+    <div class="sw-grid-2">
+      <div>
+        <div class="region-label">More than new furniture</div>
+        <h2 class="sw-h2">Repair, restoration, and framing too.</h2>
+        <p>Not every project starts from scratch. I repair and refinish chairs, tables, and family pieces, and I make museum-quality, hand-joined hardwood frames for artwork, photography, and heirlooms. Built-in cabinetry, mantels, doors, and gates are designed for your home and installed by the person who built them.</p>
+        <p class="sw-links"><a href="/restoration">Repair &amp; restoration →</a> <a href="/framing">Picture framing →</a></p>
+      </div>
+      <blockquote class="sw-quote">
+        <p>&ldquo;I only had a humble job for this master craftsman, to repair 4 different vintage chairs I had collected, but he was happy to service them and charged me an excellent price. … It is rare to find a craftsman of his caliber out here in the edge of Texas-New Mexico. Highest possible recommendation!&rdquo;</p>
+        <cite>Mary Wells · Verified Google review</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="sw-section">
+    <div class="region-label">Common questions</div>
+    <div class="sw-faq">
+      <details><summary>Is delivery really free across the Southwest?</summary><p>Yes. Delivery is free across New Mexico, Texas, and Arizona, and available throughout the rest of the U.S. Delivery details are covered in your written quote.</p></details>
+      <details><summary>How do we design a piece if I live hours away?</summary><p>It starts with a free phone call or email. Tell me about the room, how the piece will be used, and what you like. A rough idea and a photo or two is enough. We work through wood, finish, size, and design details together, and then I send a written quote.</p></details>
+      <details><summary>How long does a commission take?</summary><p>It depends on the design, the wood, and the size. Every client gets a realistic schedule up front, and I keep you updated along the way.</p></details>
+      <details><summary>What does a custom piece cost?</summary><p>Every piece is priced individually, because the wood, the design, and the hours are different every time. The first conversation is free, and every quote includes design help, material selection, and a one-year guarantee on all labor.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-band" style="margin-top:56px;">
+    <div class="inner">
+      <div>
+        <h2 style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(28px,3vw,40px);letter-spacing:-0.01em;">Planning a piece for a <em style="font-style:italic;color:#d49a5c;">Southwest home?</em></h2>
+        <p style="margin-top:12px;color:var(--cream-soft);max-width:52ch;">Call, email, or send a sketch. The first conversation is free.</p>
+      </div>
+      <a href="tel:+15756407463" class="btn btn-primary">Call (575) 640-7463</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="/restoration">Repair &amp; restoration</a></div>
+    <div><a href="/framing">Picture framing</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
+</body>
+</html>
