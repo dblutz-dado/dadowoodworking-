@@ -394,6 +394,51 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
   nav.primary a.phone-link svg { width: 18px; height: 18px; margin: 0 !important; }
 }
 </style>
+<style id="home-sections">
+  .featured, .how, .testimonial, footer.site-footer { font-family: 'Inter', system-ui, sans-serif; }
+  .featured { background: #ede4d3; color: var(--ink); padding: 96px clamp(24px, 5vw, 72px); }
+  .featured .inner, .how .inner { max-width: 1360px; margin: 0 auto; }
+  .featured .top { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+  .featured h2, .how h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -0.015em; color: var(--ink); }
+  .featured h2 em, .how h2 em { font-style: italic; color: var(--walnut); }
+  .see-all { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--walnut); text-decoration: none; border-bottom: 1px solid rgba(107,63,34,0.4); padding-bottom: 2px; }
+  .see-all:hover { color: var(--ink); border-color: var(--ink); }
+  .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 24px; }
+  .piece { display: block; text-decoration: none; color: inherit; }
+  .piece .frame { position: relative; overflow: hidden; background: var(--cream); border-radius: 2px; aspect-ratio: 4 / 5; }
+  .piece img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .piece:hover img { transform: scale(1.03); }
+  .piece .meta-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20px; margin-top: 14px; }
+  .piece .meta-sub { margin-top: 4px; font-size: 13px; color: rgba(26,20,16,0.66); }
+  .how { background: var(--cream); color: var(--ink); padding: 96px clamp(24px, 5vw, 72px); }
+  .how .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 64px; align-items: start; }
+  .how-intro p { margin: 20px 0 28px; font-size: 16px; line-height: 1.65; color: rgba(26,20,16,0.75); max-width: 44ch; }
+  .steps { list-style: none; margin: 0; padding: 0; }
+  .steps li { display: grid; grid-template-columns: 56px 1fr; column-gap: 16px; padding: 22px 0; border-top: 1px solid rgba(26,20,16,0.12); }
+  .steps li:last-child { border-bottom: 1px solid rgba(26,20,16,0.12); }
+  .steps .num { grid-row: span 2; font-family: 'Fraunces', serif; font-size: 22px; color: var(--walnut); }
+  .steps h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 21px; }
+  .steps p { margin-top: 6px; font-size: 15.5px; line-height: 1.6; color: rgba(26,20,16,0.75); }
+  .testimonial { background: var(--ink); color: var(--cream); padding: 96px clamp(24px, 5vw, 72px); text-align: center; }
+  .testimonial blockquote { max-width: 42ch; margin: 0 auto; font-family: 'Fraunces', serif; font-weight: 400; font-style: italic; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35; letter-spacing: -0.01em; }
+  .testimonial cite { display: block; margin-top: 24px; font-family: 'Inter', sans-serif; font-style: normal; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber-hot); }
+  .all-reviews { display: inline-block; margin-top: 28px; color: var(--cream-soft); font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(217,151,87,0.5); padding-bottom: 2px; }
+  .all-reviews:hover { color: var(--amber-hot); }
+  footer.site-footer { background: #14100c; color: var(--cream-soft); padding: 48px clamp(24px, 5vw, 72px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 13px; letter-spacing: 0.02em; }
+  footer .foot-brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-size: 16px; color: var(--cream); }
+  footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: block; flex: none; }
+  footer a { color: var(--cream-soft); text-decoration: none; }
+  footer a:hover { color: var(--amber-hot); }
+  @media (max-width: 900px) {
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    .how .inner { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 560px) {
+    .featured, .how, .testimonial { padding-top: 64px; padding-bottom: 64px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    footer.site-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+</style>
 </head>
 <body>
 
@@ -467,5 +512,87 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
     <div class="scroll-hint" aria-hidden="true">Scroll</div>
 
   </section>
+
+  <main id="main">
+  <!-- SELECTED WORK -->
+  <section class="featured" aria-labelledby="work-heading">
+    <div class="inner">
+      <div class="top">
+        <h2 id="work-heading">Selected work <em>from the workshop</em></h2>
+        <a class="see-all" href="/gallery">See the full gallery &rarr;</a>
+      </div>
+      <div class="featured-grid">
+        <a class="piece" href="/pieces_pages/two-board-mahogany-dining-table">
+          <div class="frame"><img src="pieces/two-board-mahogany-dining-table-dado-woodworking.jpg" srcset="pieces/two-board-mahogany-dining-table-dado-woodworking-640w.webp 640w, pieces/two-board-mahogany-dining-table-dado-woodworking-1024w.webp 1024w, pieces/two-board-mahogany-dining-table-dado-woodworking.webp 1500w" sizes="(max-width: 760px) 100vw, 30vw" alt="Two-board mahogany dining table in a modern farmhouse design, handmade by Dado Woodworking" loading="lazy" /></div>
+          <div class="meta-title">Two-board mahogany dining table</div>
+          <div class="meta-sub">Modern farmhouse design</div>
+        </a>
+        <a class="piece" href="/pieces_pages/entry-console-table">
+          <div class="frame"><img src="pieces/entry-console-table-dado-woodworking.jpg" srcset="pieces/entry-console-table-dado-woodworking-640w.webp 640w, pieces/entry-console-table-dado-woodworking.webp 1067w" sizes="(max-width: 760px) 100vw, 30vw" alt="Red oak entry console table with a live-edge drawer pull, accepted into the 2025 Texas Furniture Makers Show" loading="lazy" /></div>
+          <div class="meta-title">Entry console table</div>
+          <div class="meta-sub">Red oak · 2025 Texas Furniture Makers Show</div>
+        </a>
+        <a class="piece" href="/pieces_pages/cypress-corner-cabinets">
+          <div class="frame"><img src="pieces/cypress-corner-cabinets-dado-woodworking.jpg" srcset="pieces/cypress-corner-cabinets-dado-woodworking-640w.webp 640w, pieces/cypress-corner-cabinets-dado-woodworking-1024w.webp 1024w, pieces/cypress-corner-cabinets-dado-woodworking.webp 1440w" sizes="(max-width: 760px) 100vw, 30vw" alt="Set of cypress corner cabinets with black walnut accents and glass doors, handmade by Dado Woodworking" loading="lazy" /></div>
+          <div class="meta-title">Cypress corner cabinets</div>
+          <div class="meta-sub">Black walnut offset with cypress</div>
+        </a>
+        <a class="piece" href="/pieces_pages/stepped-library-bookcases">
+          <div class="frame"><img src="pieces/stepped-library-bookcases-dado-woodworking.jpg" srcset="pieces/stepped-library-bookcases-dado-woodworking-640w.webp 640w, pieces/stepped-library-bookcases-dado-woodworking.webp 756w" sizes="(max-width: 760px) 100vw, 30vw" alt="Stepped library bookcases in painted poplar, built for a Las Cruces home by Dado Woodworking" loading="lazy" /></div>
+          <div class="meta-title">Stepped library bookcases</div>
+          <div class="meta-sub">Painted poplar · Las Cruces</div>
+        </a>
+        <a class="piece" href="/pieces_pages/new-orleans-console-table">
+          <div class="frame"><img src="pieces/new-orleans-console-table-dado-woodworking.jpg" srcset="pieces/new-orleans-console-table-dado-woodworking-640w.webp 640w, pieces/new-orleans-console-table-dado-woodworking.webp 1024w" sizes="(max-width: 760px) 100vw, 30vw" alt="New Orleans console table in ash and cherry, handmade by Dado Woodworking" loading="lazy" /></div>
+          <div class="meta-title">New Orleans console table</div>
+          <div class="meta-sub">Ash and cherry</div>
+        </a>
+        <a class="piece" href="/pieces_pages/red-grandis-liquor-cabinet">
+          <div class="frame"><img src="pieces/red-grandis-liquor-cabinet-dado-woodworking.jpg" srcset="pieces/red-grandis-liquor-cabinet-dado-woodworking-640w.webp 640w, pieces/red-grandis-liquor-cabinet-dado-woodworking.webp 962w" sizes="(max-width: 760px) 100vw, 30vw" alt="Red Grandis liquor cabinet handcrafted for organized storage by Dado Woodworking" loading="lazy" /></div>
+          <div class="meta-title">Red Grandis liquor cabinet</div>
+          <div class="meta-sub">Handcrafted for organized storage</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW A COMMISSION WORKS -->
+  <section class="how" aria-labelledby="how-heading">
+    <div class="inner">
+      <div class="how-intro">
+        <h2 id="how-heading">How a commission <em>works</em></h2>
+        <p>Every piece is different, so timing depends on the design, the wood, and the size. I give every client a realistic schedule up front and keep you updated along the way.</p>
+        <a class="see-all" href="/commission">Start a commission &rarr;</a>
+      </div>
+      <ol class="steps">
+        <li><span class="num">01</span><h3>First conversation</h3><p>A short call or email, free of charge. Tell me about the room, how the piece will be used, and what you like.</p></li>
+        <li><span class="num">02</span><h3>Design &amp; quote</h3><p>We settle the wood, finish, size, and design details together. Then I send a written quote with a price and a realistic schedule.</p></li>
+        <li><span class="num">03</span><h3>Materials</h3><p>Once the quote is approved, I select the boards for your piece.</p></li>
+        <li><span class="num">04</span><h3>Build</h3><p>Your piece is built by hand in my Chamberino workshop.</p></li>
+        <li><span class="num">05</span><h3>Delivery</h3><p>Free across New Mexico, Texas, and Arizona, and available throughout the rest of the U.S. Every piece comes with a one-year guarantee on all labor.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- REVIEW -->
+  <section class="testimonial" aria-label="Customer review">
+    <blockquote>
+      &ldquo;Doug is a master of his craft. We wanted a custom bed frame that was going to last us forever and Doug definitely delivered. &hellip; He even personally delivered it to our home and assisted with the assembly.&rdquo;
+      <cite>Kevin Kevinson · Verified Google review</cite>
+    </blockquote>
+    <a class="all-reviews" href="https://maps.google.com/?cid=14186976301654413334" target="_blank" rel="noopener">Read all 87 reviews on Google &rarr;</a>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="foot-brand"><img class="foot-logo" src="brand/dadowoodworking-logo.png" alt="dadowoodworking logo" width="36" height="36" loading="lazy" />dadowoodworking</div>
+    <div>650 La Vina Road, Chamberino, NM 88027</div>
+    <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+    <div><a href="/locations">Service areas</a></div>
+    <div><a href="/restoration">Repair &amp; restoration</a></div>
+    <div><a href="/framing">Picture framing</a></div>
+    <div><a href="https://maps.google.com/?cid=14186976301654413334" target="_blank" rel="noopener">★ 5.0 on Google · 87 reviews</a></div>
+    <div>© 2026 · Handcrafted in New Mexico</div>
+  </footer>
 </body>
 </html>
