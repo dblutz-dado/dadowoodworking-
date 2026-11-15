@@ -129,6 +129,7 @@
     position: relative;
     min-height: calc(100vh - 40px);
     background-image: url('workshop-hero-dado-woodworking.jpg');
+    background-image: image-set(url('workshop-hero-dado-woodworking.webp') type('image/webp'), url('workshop-hero-dado-woodworking.jpg') type('image/jpeg'));
     background-size: cover;
     background-position: center right;
     overflow: hidden;
@@ -330,6 +331,9 @@
   nav.primary a { white-space: nowrap; }
   @media (max-width: 1180px) and (min-width: 901px) { nav.primary { gap: 20px; } }
   .subhead-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  @media (max-width: 760px) {
+    .hero { background-image: url('workshop-hero-dado-woodworking.jpg'); background-image: image-set(url('workshop-hero-dado-woodworking-1024w.webp') type('image/webp'), url('workshop-hero-dado-woodworking.jpg') type('image/jpeg')); }
+  }
 </style>
   <link rel="icon" type="image/png" href="brand/favicon.png" />
 <!-- SEO:START -->
