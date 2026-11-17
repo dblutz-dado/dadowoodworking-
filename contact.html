@@ -574,7 +574,9 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
   </footer>
 
   <script>
-    // Sends form submissions to dblutz@gmail.com via FormSubmit (formsubmit.co).
+    // Sends form submissions to dblutz@gmail.com via Web3Forms (web3forms.com).
+    // The access key is a public key, safe to include in page code.
+    // If sending fails, visitors can open their email app with the message prefilled.
     (function () {
       var form = document.getElementById('contact-form');
       var msg = document.getElementById('form-msg');
@@ -590,20 +592,26 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
           if (el.type === 'checkbox') { data[el.name] = el.checked ? 'Yes' : 'No'; return; }
           data[el.name] = el.value;
         });
-        data._subject = 'New website message' + (data.name ? ' from ' + data.name : '');
-        data._template = 'table';
-        data._captcha = 'false';
-        if (data.email) data._replyto = data.email;
+        var subject = 'New website message' + (data.name ? ' from ' + data.name : '');
+        var bodyText = Object.keys(data).map(function (k) {
+          return k.charAt(0).toUpperCase() + k.slice(1).replace(/_/g, ' ') + ': ' + data[k];
+        }).join('\n');
+        var mailtoHref = 'mailto:dblutz@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyText);
+        data.access_key = '5727a4d7-853b-411e-b891-4f1688cdc6c2';
+        data.subject = subject;
+        data.from_name = 'dadowoodworking.com';
+        if (data.email) data.replyto = data.email;
+        data.botcheck = '';
         btn.disabled = true;
         msg.classList.remove('success', 'error');
         msg.textContent = 'Sending…';
-        fetch('https://formsubmit.co/ajax/dblutz@gmail.com', {
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(data)
         }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
           .then(function (res) {
-            if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'Send failed');
+            if (!res.ok || res.j.success !== true) throw new Error(res.j.message || 'Send failed');
             msg.classList.add('success');
             msg.textContent = "Thanks — your note is on the way to Doug. I'll be in touch soon.";
             form.reset();
@@ -612,7 +620,9 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
           .catch(function () {
             btn.disabled = false;
             msg.classList.add('error');
-            msg.innerHTML = 'Sorry, your message didn\'t go through. Please call <a href="tel:+15756407463">(575) 640-7463</a> or email <a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a>.';
+            msg.innerHTML = 'Sorry, your message didn\'t go through. <a class="mailto-fallback" href="">Open it in your email app</a> to send it, or call <a href="tel:+15756407463">(575) 640-7463</a>.';
+            var fb = msg.querySelector('.mailto-fallback');
+            if (fb) fb.setAttribute('href', mailtoHref);
           });
       });
     })();
