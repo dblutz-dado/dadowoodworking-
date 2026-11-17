@@ -150,6 +150,12 @@
     margin-top: 24px; padding-top: 24px;
     border-top: 1px solid rgba(244,237,225,0.12);
     font-size: 14.5px; line-height: 1.7; color: var(--cream-soft);
+    display: flex; align-items: center; gap: 20px;
+  }
+  .form-inner .intro .contact-line .doug-photo {
+    flex: none; width: 96px; height: 128px; object-fit: cover; object-position: 50% 35%;
+    border-radius: 3px; border: 1px solid rgba(244,237,225,0.14);
+    opacity: 0.92; filter: saturate(0.85);
   }
   .form-inner .intro .contact-line a {
     color: var(--amber-hot); text-decoration: none;
@@ -434,10 +440,13 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
         <h2>Send me a <em>quick note</em>.</h2>
         <p>For general questions, delivery questions, or a first hello. If you already know you want to commission a piece, the <a href="/commission" style="color:var(--amber-hot);border-bottom:1px solid rgba(217,151,87,0.4);text-decoration:none;">commission form</a> has a few more fields to get us started faster.</p>
         <div class="contact-line">
-          <div><strong>Doug at dadowoodworking</strong></div>
-          <div><a href="tel:+15756407463">(575) 640-7463</a></div>
-          <div><a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a></div>
-          <div>650 La Vina Road, Chamberino, NM 88027</div>
+          <picture><source srcset="pieces/doug-lutz-dadowoodworking.webp" type="image/webp" /><img class="doug-photo" src="pieces/doug-lutz-dadowoodworking.jpg" width="392" height="549" alt="Doug Lutz of dadowoodworking outdoors in a wide-brim hat, with a companion" loading="lazy" /></picture>
+          <div>
+            <div><strong>Doug at dadowoodworking</strong></div>
+            <div><a href="tel:+15756407463">(575) 640-7463</a></div>
+            <div><a href="mailto:dblutz@gmail.com">dblutz@gmail.com</a></div>
+            <div>650 La Vina Road, Chamberino, NM 88027</div>
+          </div>
         </div>
       </div>
 
