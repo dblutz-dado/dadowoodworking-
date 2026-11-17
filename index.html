@@ -317,6 +317,7 @@
     }
     .hero-content { padding-top: 160px; padding-bottom: 140px; }
     h1.headline { font-size: clamp(38px, 10vw, 56px); }
+    h1.headline em { white-space: nowrap; }
     .scroll-hint { display: none; }
     .trust { justify-content: flex-start; }
   }
@@ -334,6 +335,7 @@
   @media (max-width: 760px) {
     .hero { background-image: url('workshop-hero-dado-woodworking.jpg'); background-image: image-set(url('workshop-hero-dado-woodworking-1024w.webp') type('image/webp'), url('workshop-hero-dado-woodworking.jpg') type('image/jpeg')); }
   }
+  @media (max-width: 380px) { h1.headline { font-size: 34px; } }
 </style>
   <link rel="icon" type="image/png" href="brand/favicon.png" />
 <!-- SEO:START -->
@@ -478,8 +480,8 @@ footer .foot-logo { width: 36px; height: 36px; border-radius: 3px; display: bloc
     <div class="hero-content">
       <span class="eyebrow">Custom Hardwood Furniture · Chamberino, NM</span>
       <h1 class="headline" id="hero-heading">
-        Heirlooms built<br />
-        in the <em>high desert</em>,<br />
+        One maker,<br />
+        <em>one piece at a time</em>,<br />
         made to last<br />
         for generations.
       </h1>
